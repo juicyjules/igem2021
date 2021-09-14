@@ -1,12 +1,126 @@
+@font-face {
+    font-family: Bahnschrift;
+    src: url("../dist/fonts/BAHNSCHRIFT.ttf") /* EOT file for IE */
+}
+@font-face {
+    font-family: Engraver;
+    src: url("../dist/fonts/ENGR.ttf") /* TTF file for CSS3 browsers */
+}
+
 body {
-    font-family: 'Work Sans', sans-serif;
+    font-family: Bahnschrift;
+    font-weight: lighter;
+    color: var(--light);
+    background-color: var(--dark);
 }
-   
+p {
+    font-size:1.25em;
+}
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Crimson Text', serif;
+    font-family: Engraver, 'Crimson Text', serif;
 }
+:root {
+    --dark: #222;
+    --grey: #9f9a9a;
+    --light: #f5efed;
+    --accent: #b5e5ec;
+    --text-dark:#3d3d3d;
+    --text-light:#f5efed;
+}
+/* NAVBAR */
 .navbar {
     border-bottom: 1px solid gray;
     font-size: 1.2em;
     margin-bottom:20px;
+    font-weight: 300;
+    background-color: white;
+}
+.navbar-toggler {
+    border:none;
+}
+.navbar-nav>li, .navbar-nav {
+    float: left !important;
+  }
+
+@media (max-width: 1500px) {
+    .navbar {
+        margin-bottom:3em;
+    }
+ }
+ @media (max-width: 1200px){
+    .navbar-expand-xl .navbar-nav .nav-link {
+    padding-right: .5rem;
+    padding-left: .5rem;
+    }
+    .navbar-collapse {
+        padding-top:50px;
+    }
+}
+.dropdown-toggle::after {
+    margin-left:0 !important;
+    display:none;
+}
+
+.logo-circle {
+    top: 0;
+    left:-3px;
+    position: absolute;
+    background: white;
+    align-content: center;
+    padding: 10px 10px 10px 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 70px;
+}
+.logo-circle .brand {
+    padding-left: 2px;
+}
+.brand-text-logo {
+    margin-left:75px;
+    font-family: Engraver;
+    color: var(--text-dark)!important;
+    transition: all ease-in-out 0.2s;
+}
+.brand-text-logo:hover {
+   opacity: 0.55;
+}
+
+.nav-item .dropdown-menu{
+    padding:0 0 !important;
+    border:1px solid white;
+    border-radius:0;
+    font-size:0.75em;
+}
+/* NAVBAR END */
+/* CUSTOM NODE STYLING*/
+.moclomania {
+    font-family: Engraver;
+}
+.moclo-image {
+    display:inline-block;
+    height:15vw;
+    width:15vw;
+}
+.moclo-heading {
+    vertical-align: middle;
+}
+/* CUSTOM NODE STYLING END*/
+.video {
+    position:absolute;
+    z-index:-100;
+    top:5vh;
+    height:95vh;
+    max-width:100vw;
+    opacity: 0.25;
+    filter:saturate(0.5);
+    right:0;
+    bottom:0;
+    overflow:hidden;
+}
+.promotion-video {
+    background-color: none!important;
+}
+.outlined {
+    border: 3px var(--light) solid;
+    border-radius:5px;
 }

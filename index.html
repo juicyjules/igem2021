@@ -15,43 +15,107 @@
     <script src="src/scripts/utility.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-light">
+    <nav class="navbar navbar-expand-xl navbar-light">
         <a class="navbar-brand" href="index.html">
-            <div class="circle"><img alt="" class="brand" height="70"
-                    src="src/resources/leish.png" width="70" />
+            <div class="logo-circle">
+                <img alt="" class="brand" height="80"
+                    src="src/resources/logo.png" width="80" />
             </div>
+
         </a>
+        <div class=nav-item>
+            <a href="#" class="nav-link brand-text-logo">MOCLOMANIA</a>
+        </div>
         <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-            class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+            class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="home.html">Home</a>
+                    <a class="nav-link" href="link_home">Home</a>
                 </li>
                 <li class="nav-item dropdown dmenu">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown collapse" aria-expanded="false">
-                      Link
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Team
                     </a>
                     <ul class="dropdown-menu sm-menu" aria-labelledby="navbarScrollingDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="link_members">Members</a></li>
+                      <li><a class="dropdown-item" href="link_attribution">Attribution</a></li>
                     </ul>
-                  </li>
+                </li>
+                <li class="nav-item dropdown dmenu">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Project
+                    </a>
+                    <ul class="dropdown-menu sm-menu" aria-labelledby="navbarScrollingDropdown">
+                      <li><a class="dropdown-item" href="#">Description</a></li>
+                      <li><a class="dropdown-item" href="#">Implementation</a></li>
+                      <li><a class="dropdown-item" href="#">Proof of Concept</a></li>
+                      <li><a class="dropdown-item" href="#">Results</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown dmenu">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Laboratory
+                    </a>
+                    <ul class="dropdown-menu sm-menu" aria-labelledby="navbarScrollingDropdown">
+                      <li><a class="dropdown-item" href="#">Parts</a></li>
+                      <li><a class="dropdown-item" href="#">Engineering</a></li>
+                      <li><a class="dropdown-item" href="#">Contribution</a></li>
+                      <li><a class="dropdown-item" href="#">Basic Protocols</a></li>
+                      <li><a class="dropdown-item" href="#">Labjournal</a></li>
+                      <li><a class="dropdown-item" href="#">Safety</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown dmenu">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Human Practices
+                    </a>
+                    <ul class="dropdown-menu sm-menu" aria-labelledby="navbarScrollingDropdown">
+                      <li><a class="dropdown-item" href="#">Human Practices</a></li>
+                      <li><a class="dropdown-item" href="#">Education and Communication</a></li>
+                      <li><a class="dropdown-item" href="#">Collaboration</a></li>
+                      <li><a class="dropdown-item" href="#">Partnership</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Sponsors</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Awards</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Judging Form</a>
+                </li>
             </ul>
         </div>
     </nav>
     <main>
         <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 class="display-4">iGem 2021</h1>
-              <p class="lead">This thing will contain everything you could imagine wow. Furthermore fuck bootstrap but w/e</p>
-              <hr class="my-4">
-              <p>Alles bisschen unangenehm aber was solls ugh</p>
+            <div class="container moclo-jumbo">
+                <div class=image-heading>
+                    <img alt="" class="moclo-image" src="src/resources/logo.png" />
+                    <div class="moclo-heading d-xl-inline-block">
+                        <h1 class="display-1 moclomania">
+                            MOCLOMANIA
+                        </h1>
+                        <p class="lead">Revolutionizing therapeutic protein production</p>
+                    </div>
+                </div>
+                <hr class="my-3">
+                <p>I need more information to continue writing more text here. But I don't know what they want me to write. </p>
             </div>
+          </div>
+          <div class="video">
+            <video autoplay muted loop>
+            <source src="src/resources/rick.webm" type="video/webm">
+          </div>
+          <div class="container outlined">
+              <div class="promotion-video w-100 p-5 h-50 text-center">
+                <h1 class="align-middle">Promotion Video</h1>
+                <button class="btn btn-lg btn-outline-light align-middle">Show me!</button>
+              </div>
           </div>
     </main>
 </body>
