@@ -91,6 +91,16 @@ h1, h2, h3, h4, h5, h6 {
     border-radius:0;
     font-size:0.75em;
 }
+.nav-item .dropdown-menu .dropdown-item {
+    padding: 0.8em 1.6em;
+}
+.nav-item.active > .nav-link {
+    color: var(--text-dark);
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: var(--light);
+    background-color: var(--dark);
+}
 /* NAVBAR END */
 /* CUSTOM NODE STYLING*/
 .moclomania {
