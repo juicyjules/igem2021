@@ -7,23 +7,53 @@
     src: url("../dist/fonts/ENGR.ttf") /* TTF file for CSS3 browsers */
 }
 
-body {
-    font-family: Bahnschrift;
+.body {
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: lighter;
     color: var(--light);
     background-color: var(--dark);
     font-size:1.25em;
 }
+.body p {
+    font-size:1.2em;
+}
+*, *:after, *:before {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    }
+h2 > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background: var(--accent);
+    border-radius: 5px;
+    transform: scaleX(1);
+    transition: .25s linear;
+}
+
+
+.quote {
+    
+}
+
 p{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: lighter;
+    text-align: justify;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Bahnschrift, 'Crimson Text', serif;
-    margin-bottom:1rem;
-    margin-top:1rem;
+    font-size: 200%;
 }
+li {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
 :root {
     --dark: #222;
     --grey: #9f9a9a;
@@ -32,27 +62,37 @@ h1, h2, h3, h4, h5, h6 {
     --text-dark:#3d3d3d;
     --text-light:#f5efed;
 }
+.vr {
+    width:2px;
+    background-color:var(--light);
+}
 /* NAVBAR */
 .navbar {
+    font-family: Bahnschrift;
     border-bottom: 1px solid gray;
-    font-size: 1.2em;
     margin-bottom:20px;
+    padding-bottom:0.2rem;
+    padding-top:0.2rem;
     font-weight: 300;
     background-color: white;
+}
+.even-space{
+    justify-content: space-around;
+    width: 100%;
 }
 .navbar-toggler {
     border:none;
 }
 .navbar-nav>li, .navbar-nav {
     float: left !important;
-  }
+}
 
 @media (max-width: 1500px) {
     .navbar {
         margin-bottom:3em;
     }
- }
- @media (max-width: 1200px){
+}
+@media (max-width: 1200px){
     .navbar-expand-xl .navbar-nav .nav-link {
     padding-right: .5rem;
     padding-left: .5rem;
@@ -90,8 +130,15 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-dark)!important;
     transition: all ease-in-out 0.2s;
 }
+@media (max-width: 575.98px) { 
+    .brand-text-logo {
+        margin-left:0;
+        text-align: center;
+        transition: all ease-in-out 0.2s;
+    }
+}
 .brand-text-logo:hover {
-   opacity: 0.55;
+opacity: 0.55;
 }
 
 .nav-item .dropdown-menu{
@@ -113,9 +160,9 @@ h1, h2, h3, h4, h5, h6 {
 /* NAVBAR END */
 /*scrollspy*/
 .scrollspy {
- left:1em;
- padding: 1em 0.2em;
- position:fixed;
+    left:1em;
+    padding: 1em 0.2em;
+    position:fixed;
 }
 .scrollspy-item {
     background: transparent !important;
@@ -128,6 +175,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 /*scrollspy end*/
 /* CUSTOM NODE STYLING*/
+.heading-hero {
+    min-height:50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-heading {
+    font-weight:900;
+    letter-spacing:0.5rem;
+}
+.color-flip {
+    background: linear-gradient(
+        var(--accent) 0%,
+        var(--text-light) 50%
+    ) fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .moclomania {
     font-family: Engraver;
 }
@@ -162,9 +227,53 @@ h1, h2, h3, h4, h5, h6 {
 .text-heading {
     padding-left:1rem;
     border-left: 3px solid var(--accent);
-    margin-bottom:0.5em;
+
 }
 .interesting-box {
     border: 4px solid var(--accent);
     border-radius: 0px;
+}
+.social-link {
+    color: inherit;
+    text-decoration: inherit;
+    transition: color 0.s ease-in-out;
+}
+.social-link:hover {
+    color: var(--accent)
+
+}
+/*footer stuff*/
+footer {
+    padding-bottom:5rem;
+    padding-top:3rem;
+}
+.sponsor {
+    padding:1em 0.4em;
+}
+.sponsor img {
+    border-radius: 7px;
+}
+#go-up {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-size:1.2em;
+    background-color: var(--accent);
+    color: var(--text-light);
+    border-radius: 100%;
+    height:2em;
+    width:2em;
+    position:fixed;
+    bottom:2em;
+    right:2em;
+    transition: all 0.3 ease-in-out;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease 0s;
+    opacity:0;
+    z-index:99;
+}
+#go-up:hover {
+    transform: scale(1.2);
+    background-color: var(--text-light);
+    color: var(--accent);
 }
