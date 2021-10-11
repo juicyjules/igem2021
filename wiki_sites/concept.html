@@ -1,0 +1,90 @@
+{{TU_Kaiserslautern}}
+{{TU_Kaiserslautern/bootstrapcssdd}}
+{{TU_Kaiserslautern/stupidbasestyle}}
+{{TU_Kaiserslautern/header}}
+<html>
+       <div id="scrollspy" class="scrollspy d-none d-xxl-block">
+            <a class="scrollspy-item list-group-item list-group-item-action" href="#head-1">Cloning</a>
+            <a class="scrollspy-item list-group-item list-group-item-action" href="#head-1">Protein detection</a>
+        </div>
+        <div id="go-up"><i class="fa fa-arrow-up"></i></div>
+        <div class="jumbotron jumbotron-fluid heading-hero" id="header"
+            style="background: linear-gradient(rgba(0, 0, 0, 0.35), var(--dark) 100%),
+                url(src/resources/imgs/test-2.png) no-repeat center center fixed;">
+                        <h1 class="display-1 image-heading color-flip px-1">
+                            Proof of Concept
+                        </h1>
+        </div>
+        <div class="container-md my-10 py-5" id="text-body">
+            <p>The goal of our project is to establish the modular cloning system (MoClo) in <i>Leishmania tarentolae</i> and to create a genetic part library to facilitate the production of various proteins that were previously difficult to synthesize due to the lack of a suitable organism. </i>L. tarentolae</i> offers the advantage of modifying proteins similar to human cells. This allows the production of human-like proteins, especially for therapeutic purposes. Prioritized was the expression of SARS-CoV-2 receptor binding domain spike protein (RBD).</p>
+    
+            <h2 class="text-heading color-flip" id="head-1">Cloning</h2>
+            <p>The Golden Gate assembly method based on type II restriction enzymes and T4 ligase was used.</p>
+            
+            <div class="figure">
+                <div class="fig-image pb-1">
+                    <img src="https://via.placeholder.com/500" class="img-fluid mx-auto d-block" alt="">
+                </div>
+                <div class="fig-caption">
+                    <span>Structure of a level 0 or level 1 destination vector. The L0 vector carries the spectinomycin resistance gene and L1 ampicillin resistance gene.</span>
+                </div>
+            </div>
+            <p>Following backbones were used to create L0 parts:</p>
+            <ul>
+            <li>B2 – pAGM 1276</li>
+            <li>B3 – pICH41258</li>
+            <li>B4 – pAGM 1299</li>
+            <li>B3-B4 – pAGM1287</li>
+            <li>B5 – pAGM 1301</li>
+            </ul>
+            <p>pLEXSY_IE-blecherry3 with LacZ insertion markers was used as a backbone for level 1. The endogenous BsaI interfaces were removed using point mutations. LacZ was used as an indicator of induction for new constructs, allowing blue-white selection in the presence of IPTG and X-Gal. To create matching constructs, BbsI was used at level 0 and BsaI at level 1.</p>
+             
+            
+            <div class="figure">
+                <div class="fig-image pb-1">
+                    <img src="https://via.placeholder.com/500" class="img-fluid mx-auto d-block" alt="">
+                </div>
+                <div class="fig-caption">
+                    <span>
+                        Scheme of the compilation of level 1 from the L0 constructs.
+                    </span>
+                </div>
+            </div>
+            <p>In total. nine constructs were successfully cloned into <i>E. coli</i> and transfected into <i>L. tarentolae</i>.</p>
+             
+            
+            <div class="figure">
+                <div class="fig-image pb-1">
+                    <img src="https://via.placeholder.com/500" class="img-fluid mx-auto d-block" alt="">
+                </div>
+                <div class="fig-caption">
+                    <span>
+                        Scheme of created constructs. 3xHA, TEV-GST, HA-His, Strep8His tags enable the purification of the protein.
+                    </span>
+                </div>
+            </div>
+
+            <h2 class="text-heading color-flip" id="head-2">Protein detection</h2>
+            <p>Affinity chromatography was used to isolate the target protein from the lyzed <i>L. tarentolae</i> cells.</p>
+            <p>SARS-CoV-2 RBD isolated from <i>L. tarentolae</i> cultures was detected using CoronaAssay 293T ACE2-TMPRSS2 overexpressing cell line.</p> 
+            <p>Expression of mCherry was detected by fluorescence in the range of 550-650 nm.</p>
+            <p>Fluorescent <i>L. tarentolae</i> colonies with inserted HA-RBD-Srep8His construct.</p>
+            
+            <div class="sources">
+                <h3>Sources</h3>
+                <ol class="source-list">
+                    <li><a id="ref-1" href="http://2013.igem.org/Team:BostonU/MoCloChara">http://2013.igem.org/Team:BostonU/MoCloChara</a></li>
+                </ol>
+            </div>             
+        </div>           
+        </div>
+</html>
+{{TU_Kaiserslautern/footer}}
+<html>
+</div>
+<script>
+var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+  target: '#scrollspy'
+})
+</script>
+</html>
