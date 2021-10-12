@@ -1,0 +1,179 @@
+{{TU_Kaiserslautern}} {{TU_Kaiserslautern/bootstrapcssdd}} {{TU_Kaiserslautern/stupidbasestyle}} {{TU_Kaiserslautern/header}}
+<html>
+<div id="scrollspy" class="scrollspy d-none d-xxl-block">
+    <a class="scrollspy-item list-group-item list-group-item-action" href="#head-1">School Presentation</a>
+</div>
+<div id="go-up"><i class="fa fa-arrow-up"></i></div>
+<div class="jumbotron jumbotron-fluid heading-hero" id="header" style="background: linear-gradient(rgba(0, 0, 0, 0.35), var(--dark) 100%),
+                url(src/resources/imgs/test-2.png) no-repeat center center fixed;">
+    <h1 class="display-1 image-heading color-flip px-1">
+        HUMAN PRACTICES
+    </h1>
+</div>
+<div class="container-md my-10 py-5" id="text-body">
+    <h2>MoClo-Library for future iGEM teams</h2>
+    <p>As a contribution for future iGEM teams we established the Modular Cloning system for the barely researched organism <i>Leishmania tarentolae</i>. We designed and cloned 19 parts which can be put together according to your needs. We decided to design
+        different tags for protein purification and detection (all parts can be seen in parts list). Because of that, future iGEM teams can use this system to express their desired protein in <i>Leishmania tarentolae</i>. The variety of tags we used allows
+        purification and detection of the desired protein via fluorescence microscopy.</p>
+
+    <h2>Troubleshooting for dam methylation problem</h2>
+    <p>In the process of finishing our destination vector, we had a problem with cutting a plasmid with a restriction enzyme which was blocked by dam methylation. Because of that, we tried to transform our dam methylated plasmid into the GM48 <i>E. coli</i>        strain which is dam-negative. To our surprise, the transformation did not work as planned, so we decided to try out different transformation conditions and did a lot of troubleshooting as seen in the table below.</p>
+    <p><b>Combinations of different transformation conditions and their outcome.</b></p>
+
+    [Contribution_Tabelle_1]
+
+    <p>Our first thought was that the GM48 <i>E. coli</i>l cells were very squeamish, so we raised the time for regeneration after heat shock and started to just pour the cells on preheated agar plates, without success. Applying heat for a shorter duration
+        or lowering of the DNA concentration was also unsuccessful. Increasing the amount of inserted DNA about the factor 130 to 20 µg showed the first successful transformation. To optimize the transformation results we increased the amount of DNA even
+        more and tested if preheating of the agar plates or just pouring of the cells is necessary at all.</p>
+    <p>As a concluded experience for future iGEM teams we found that the biggest factor for transforming dam methylated plasmids into dam-negative <i>E. coli</i> strains is the amount of DNA you insert into the transformation. The efficiency of transformations
+        like this seems to be more than 200 times lower then of transformations of the dam methylated plasmid into a dam-positive <i>E. coli</i> strain like TOP10. Because of that we would advise future iGEM teams, who want to do similar transformations,
+        to increase the amount of inserted DNA by factor 200 at first.</p>
+
+
+    <h1>HOW TO GENERATE A GENETIC PART FOR MODULAR CLONING IN LEISHMANIA</h1>
+    <p>3xHA detection tag? Great! mVenus fluorescent tag? Amazing! <br> But all of these basic parts are of little to no use to you if you don’t happen to exactly study our example protein, the Sars-CoV2 receptor binding domain. In the likely case that you
+        don’t, the question remains – how do you make your gene of interest suitable for Modular Cloning in Leishmania, so that you can benefit from the purification and detection tags provided in our kit?</p>
+    <p>Well, it’s a lot simpler that one might think. Let’s walk through the steps of designing, synthesizing and cloning an original L0 part for expression in <i>Leishmana tarentolae</i> together. For demonstration purposes, we’ll pick another <b>exemplary protein</b>.
+        The human glycoprotein <b>erythropoetin</b> (short EPO) seems to be a suitable candidate. It’s a signaling protein produced by fibroblasts in the kidney and induces <b>red blood cell production</b> in the bone marrow. Recombinant EPO is an important
+        biopharmaceutical for the treatment of <b>anaemia</b>, a shortage of red blood cells that often occurs in patients with chronic kidney failure or as a side effect of cancer treatment.</p>
+    <p>So now that we have picked our exemplary protein of interest, our objective is to generate a basic genetic part that is suitable for Modular Cloning and can thus be equipped with a pre-existing purification tag from our MoCloMania collection. Furthermore,
+        the part has to be functionally expressed in <i>Leishmania tarentolae</i>. Let’s get started!</p>
+
+    <h2>1. GETTING THE SEQUENCE</h2>
+    <p>The very first step to generating your own basic part is, of course, to get your hands on the actual <b>sequence</b> that <b>encodes your protein of interest</b>. Are you starting a new research project? Or do you already have access to genetic material,
+        say the <i>EPO</i> gene within a plasmid vector? In this case, you have to be aware that <b>adequate codon usage</b> can, at times, be crucial for functional target gene expression and protein folding in the recombinant expression host.
+        <ref> Liu, Y. A code within the genetic code: codon usage regulates co-translational protein folding. Cell Commun Signal 18, 145 (2020). https://doi.org/10.1186/s12964-020-00642-6</ref> Since your gene source might be tailored towards the codon usage
+        bias of another organism, e.g. <i>E. coli</i>, you might consider having your gene of interest <b>newly synthesized</b> for expression in Leishmania either way. As long as this is a financially viable option, of course. If the differences in codon
+        usage appear marginal, e.g. in rather short genetic sequences, a simple PCR might be enough to make your gene suitable for Modular Cloning. You can find more information on this in Step 5.</p>
+    <p>In case you‘ve never worked with your gene of interest before, there is a plethora of online resources to help you find the genetic sequence you are looking for. Of course you have to keep in mind that you want your genetic sequence to only encode
+        <b>proteogenic amino acids</b>, so make sure to <b>pay attention to introns</b> and only get the actual <b>cDNA</b>.</p>
+    <p>In order to retrieve the genetic code for the human EPO protein, we browsed the <b>NCBI gene database</b> and, with a little bit of digging, found the <i>EPO</i> cDNA pretty easily (NCBI gene ID: 2056 -> NCBI reference sequences -> consensus
+        <a href=“https://www.ncbi.nlm.nih.gov/gene?Db=gene&Cmd=DetailsSearch&Term=2056“><b>CDS: CCDS5705.1</b></a>). A quick check in the <b>UniProt databank</b> (UniProtKB - <a href“ https://www.uniprot.org/uniprot/P01588“><b>P01588</b></a> (EPO_HUMAN)
+        tells us about the exact amino acid sequence of the human erythropoeitin precursor. It also lets us know that the first 27 amino acids are part of a signal peptide and that there are multiple sites of N-linked as well as O-linked glycosylation.</p>
+    [[File:T--TU_Kaiserslautern--EPO_Amino_Acid_Modifications.png]]
+    <br>
+    <br>
+    <b>GENETIC SEQUENCE</b> Human <i>EPO</i> <b>582 bp</b>
+    <p>ATGGGGGTGCACGAATGTCCTGCCTGGCTGTGGCTTCTCCTGTCCCTGCTGTCGCTCCCTCTGGGCCTCC CAGTCCTGGGCGCCCCACCACGCCTCATCTGTGACAGCCGAGTCCTGGAGAGGTACCTCTTGGAGGCCAA GGAGGCCGAGAATATCACGACGGGCTGTGCTGAACACTGCAGCTTGAATGAGAATATCACTGTCCCAGAC ACCAAAGTTAATTTCTATGCCTGGAAGAGGATGGAGGTCGGGCAGCAGGCCGTAGAAGTCTGGCAGGGCC
+        TGGCCCTGCTGTCGGAAGCTGTCCTGCGGGGCCAGGCCCTGTTGGTCAACTCTTCCCAGCCGTGGGAGCC CCTGCAGCTGCATGTGGATAAAGCCGTCAGTGGCCTTCGCAGCCTCACCACTCTGCTTCGGGCTCTGGGA GCCCAGAAGGAAGCCATCTCCCCTCCAGATGCGGCCTCAGCTGCTCCACTCCGAACAATCACTGCTGACA CTTTCCGCAAACTCTTCCGAGTCTACTCCAATTTCCTCCGGGGAAAGCTGAAGCTGTACACAGGGGAGGC
+        CTGCAGGACAGGGGACAGATGA
+    </p>
+
+    <b>AMINO ACID SEQUENCE</b> Human <i>EPO</i> <b>193 aa</b>
+    <p>MGVHECPAWLWLLLSLLSLPLGLPVLGAPPRLICDSRVLERYLLEAKEAENITTGCAEHCSLNENITVPD TKVNFYAWKRMEVGQQAVEVWQGLALLSEAVLRGQALLVNSSQPWEPLQLHVDKAVSGLRSLTTLLRALG AQKEAISPPDAASAAPLRTITADTFRKLFRVYSNFLRGKLKLYTGEACRTGDR
+    </p>
+    <p>Now that we have our proteogenic DNA sequence as well as our desired amino acid sequence, we can move on to the <b>second step</b>.</p>
+    <h2>2. OPTIMIZING CODON USAGE</h2>
+    <p>Thanks to the work of many smart bioinformaticians, handling the different molecular states of a piece of biological information has never been easier. A variety of <b>online tools</b> allows for easy <b>manipulation</b> and <b>transformation</b>        of DNA, RNA as well protein sequences at will. One of these services is particularly useful when it comes to <b>codon optimization</b>. The <i><b>Reverse Translate</b></i> tool of the <b>Sequence Manipulation Suite</b> (SMS) website generates
+        DNA sequences based on the a protein sequence input, all the while employing a codon usage bias of choice. As mentioned before, the codon usage bias may critically affect an organism’s capability to express recombinant genetic material. So in
+        order to make our <i>EPO</i> suitable for expression in <i>Leishmania tarentolae</i>, we’ll have to <b>reverse translate</b> our amino acid sequence while <b>employing <i>Leishmania tarentolae</i> codon usage</b>. In reality, this is just a few
+        clicks of work. The following tutorial will give you a quick overview as to how it might look on your screen:</p>
+    [[File:T—TU_Kaiserslautern—SMS_tool]]
+    <p>Visit <a href=“https://www.bioinformatics.org/sms2/rev_trans.html“>this website</a> run by the Sequence Manipulation Suite and paste your desired amino acid sequence into the <b>upper input field</b>. Next, the tool needs a <b>codon usage table</b>        that it can base its reverse translation on. You can either just use the one that we provide <a href=“HOW TO HANDLE LEISHMANIA, CODON USAGE TABLE“>here</a> or you can find it for yourself by clicking the link on the website forwarding you to the
+        <a href=“https://www.kazusa.or.jp/codon/“><b>Codon Usage Database</b></a>.</p>
+    [[File:T—TU_Kaiserslautern—Codon_Usage_Database_tool.png]]
+    <p>Here you will find a <b>QUERY box </b> in which you can simply search for <i><b>Leishmania tarentolae</b></i>, our desired expression host, and then pick the <b>whole genome</b> codon usage. Now you should be seeing something like this:</p>
+    [[File:T—TU_Kaiserslautern—Codon_Usage_Table_View _tool.png]]
+    <p>While this is clearly the right table, it is not in the right formatting yet. The <i>Reverse Translate</i> tool requires codon usage tables to obey the <b>GCG format</b>. To achieve this, you must choose a genetic code which, in our case, is that
+        of a protozoan, so pick <b>Nr. 4</b>. Then make sure to highlight the <b>CodonFrequency output</b> in <b>GCG Wisconsin Package™</b>, click submit and you’re good to go. By now, you should have ended up with a table looking like this:</p>
+    [[File:T—TU_Kaiserslautern—Codon_Usage_Table_Final.png]]
+    <p>This is exactly what we are looking for! So just go ahead, copy all of it (including the header row) and paste it back into the <b>lower input field</b> of the <i>Reverse Translate</i> page. Now the time has finally come for some good old reverse
+        translation. Simply hit the submit button and ta-da:</p>
+    [[File:T—TU_Kaiserslautern—Reverse_Translate_Pop_Up.png]]
+    <p>You should be faced with something like this. This little pop-up contains a ton of information, but only the very <b>first paragraph</b> is of interest to us, the one showing the reverse translation to a sequence of <b>most likely codons</b>. You
+        can simply copy this sequence and paste it somewhere safe and boom– you have your genetic sequence optimized for <i>Leishmanania tarentolae</i>.</p>
+    <p><b>codon optimized <i>EPO</i>:</b><br> atgggcgtgcacgagtgcccggcgtggctgtggctgctgctgagcctgctgagcctgccgctgggcctgccggtgctgggcgcgccgccgcgcctgatctgcgacagccgcgtgctggagcgctacctgctggaggcgaaggaggcggagaacatcacgacgggctgcgcggagcactgcagcctgaacgagaacatcacggtgccggacacgaaggtgaacttctacgcgtggaagcgcatggaggtgggccagcaggcggtggaggtgtggcagggcctggcgctgctgagcgaggcggtgctgcgcggccaggcgctgctggtgaacagcagccagccgtgggagccgctgcagctgcacgtggacaaggcggtgagcggcctgcgcagcctgacgacgctgctgcgcgcgctgggcgcgcagaaggaggcgatcagcccgccggacgcggcgagcgcggcgccgctgcgcacgatcacggcggacacgttccgcaagctgttccgcgtgtacagcaacttcctgcgcggcaagctgaagctgtacacgggcgaggcgtgccgcacgggcgaccgc
+    </p>
+
+    <h2>3. CHECKING FOR RECOGNITION SITES</h2>
+    <p>Now you think you might be ready for finally getting down to business, huh? WRONG! There is one more <b>essential step</b> missing. We now made sure that our genetic sequence matches Leishmania’s requirements for adequate gene expression. But does
+        it match the criteria necessary for usage in <b>Modular Cloning</b> reactions? </p>
+    <p>While MoClo certainly comes with a lot of advantages - mainly its simply experimental set-up, efficiency and of course its modularity - it also comes with a <b>downside</b>. The genetic parts employed within a MoClo reaction must always be free of
+        any <b>intrinsic BsaI/BbsI recognition sites</b>. These two type II S restriction enzymes are the enzymatic foundation to the entire Modular Cloning method and it is of utmost importance to <b>eliminate</b> any „wild“ recognition sites within
+        our gene of interest, because otherwise our genetic part might just be cut into a thousand pieces once we try to actually make use of it. We certainly do not want that to happen, so let’s make sure to employ our software of choice in order to
+        check for any endogenous BsaI/BbsI recognition sites within our optimized DNA sequence.</p>
+    [[File: [[File:T—TU_Kaiserslautern—EPO_Restriction_Sites.png]]
+    <p>Did you find any?</p>
+    <p><b>NOPE</b>. Well, aren’t you lucky! As you can see in the image above, our erythropoeitin contained a lot of recognition sites, but none for either BsaI or BbsI. Which means that we can jump right to the next step, <b>step Nr.4.</b></p>
+    <p><b>YESSS</b>. Now that’s a bummer! Due to the codon optimization, intrinsic BsaI/BbsI restriction sites should be rather rare. If you still happen to stumble upon one, don’t fret! After all, you’re having the part synthesized which means that you
+        have total control over the nucleotide make-up of its sequence. Take a closer look at the intrinsic recognition site and try to introduce <b>silent mutations</b> that will disrupt the recognition motif. Meanwhile, always keep an eye on the <b>codon usage table</b>        to ensure that you’re not messing with the amino acid sequence itself.</p>
+    [[T--TU_Kaiserslautern--Mutation_Intrinsic_Restriction_Site.png]]
+    <p>Let’s say your gene of interest contains the sequence <i>GAGAAGACG</i>. An intrinsic BbsI site that nobody saw coming! A quick peak at <i>Leishmania tarentolae</i>‘s codon usage table will tell you that <i>GAG</i> codes for the amino acid glutamic
+        acid, appearing around 49 times among 1000 codons of the Leishmania transcriptome. The triplet <i>GAA</i> also codes for glutamic acid, even though it only appears a mere 11 times among 1000 codons. But introducing a codon that‘s a little less
+        favorable is a much better trade-off than having your genetic part cut into shreds by the restriction enzymes. So let’s just switch <i>GAG</i> to <i>GAA</i> and we’re good to go! We can proceed with <b>step Nr.4</b>.</p>
+    <h2>4. CHOOSING A CLONING POSITION</h2>
+    <p>Now it’s time for some hands-on MoClo action. Have you thought about what <b>cloning position</b> you want to put your gene of interest into? It really depends on your indivdual experimental needs and on the pre-existing parts that you might be utilizing
+        from our <b>MoCloMania collection</b>.</p>
+    <p>For <b>erythropoeitin</b>, we know that the protein is subject to multiple <b>glycosylations</b>, so we’ll want to employ the <a href=“http://parts.igem.org/Part:BBa_K3781005“><b>sAP-tag secretion peptide</b></a> that will steer our protein into the
+        secretory pathway and make sure that it gets all the glycosylation action it needs. Beyond that, a purification tag such as the <a href=“http://parts.igem.org/Part:BBa_K3781017“><b>Strep8His-tag</b></a> would be cool because it will allow for
+        easy purification of our EPO from the cell culture supernatant. Checking back with our MoCloMania collection, the cloning position <b>B3_B4</b> seems to be a reasonable choice for our <i>EPO</i> part. Knowing this, we can simply take a look at
+        the <b>overhang table</b> (at the very top of this wiki page) and see that we’ll need to add <i>AATG</i> to the 5‘ end of the <i>EPO</i> gene and <i>TTCG</i> to its 3‘ end. Confused as to where these funky four nucleotide sequences are coming
+        from? Check out our page on <a href=“URL: 2021.igem.org/Team:TU_Kaiserslautern/Description“>Modular Cloning</a> for more detailed explanations!</p>
+    <p>Once you’ve chosen your desired cloning position and taken note of the respective overhangs, we can move on to <b>step Nr. 5</b>.</p>
+    <h2>5. ADD BBSI RESTRICTION SITES</h2>
+    <p>Wait –in step 3 we were told to eliminate all possible BbsI restriction sites and now we’re supposed to add new ones back in? I promise there is method to this madness! The new <b>BbsI restriction sites</b> will be added on the very ends of our gene
+        of interest, along with the respective <b>4 nucleotide overhangs</b>. Why BbsI, you’re asking? Check our page on <a href=“URL: 2021.igem.org/Team:TU_Kaiserslautern/Description“>Modular Cloning</a> for more information. Basically, the restriction
+        sites will allow us to assemble the gene part into a <b>L0 plasmid backbone</b>. This will not only make sure that the part is actually equipped with the right overhangs, it will also allow for its <b>storage</b> in a stable form over long periods
+        of time, e.g. in your very own <b>MoClo library</b>. </p>
+    <p>BbsI has the recognition site <i>GAAGAC NN XXXX</i>, with NN being two arbitrary bases and XXXX being the four nucleotide overhang that is left after cleavage. We need this overhang to be exactly the overhangs that are attributed to the MoClo <b>cloning position</b>        the part is supposed to fill. This is vital, because it allows our part to be assembled with other basic parts in the correct, pre-determined order. For starters, we can help ourselves by <b>highlighting</b> the <b>very first</b> and <b>last base triplet</b>        of our sequence of interest. Now when it comes to the addition of the overhangs, let’s look at both of them individually:</p>
+    <p><b>A. B2/B3 – AATG</b><br> On the 5‘ end of our <i>EPO</i>, we need to have the overhang <i>AATG</i>. Looking at the genetic sequence, we can see that the very first base triplet is already an <i>ATG</i>, coding for the amino acid methionine. This
+        is very helpful because all we need to do is add an additional <i>A</i> in front of the sequence and we’ve already got our overhang down. Now all there is left to do is fill in two random nucleotides and then introduce the BbsI recognition site.
+        Going off the <b>leading strand</b>, you can remember that the <b>5‘ end</b> will always carry the recognition site as <i>GAAGAC NN  XXXX</i>.</p>
+    [[File:T--TU_Kaiserslautern--EPO_BbsI+Overhangs.png]]
+    <p><b>B. B4/B5 – TTCG</b><br> We’ve decided for our <i>EPO</i> part to stretch across cloning positions <b>B3</b> as well as <b>B4</b>, meaning that the next overhang we have to consider is the one inbetween B4 and B5, namely <i>TTCG</i>. Now things
+        are a little different here. We can’t just attach <i>TTCG</i> to the 3‘ end of our gene of interest, because this would mess up the <b>downstream reading frame</b> pretty badly. In the overhang table, the underline within the overhang represents
+        the codon that is read <b>in-frame</b>. It says <i>T<u>TCG</u>, meaning that <i>TCG</i> ought to be in-frame with our gene of interest. In order to guarantee this, we have to squeeze <b>two more nucleotides</b> inbetween the 3‘ end of our gene
+        and the beginning of the overhang. Together, with the initial T of the overhang, they have to form a functional codon. And ideally, this codon translates to a small residue amino acid that will not mess with the higher structures of our resulting
+        fusion protein. A quick look at <i>Leishmania tarentolae</i>’s codon usage table reveals that <i>GGT</i>, coding for <b>glycine</b>, should be a viable option. So to the 3‘ end of our <i>EPO</i>, we’ll add <i>GGTTCG</i>, followed by two arbitrary
+        nculeotides and then the BbsI recognition site. Going off the leading strand, you can remember that the <b>3‘ end</b> will always carry the recognition site as XXXX NN GTCTTC.</p>
+    <p>Additionally to your recognition site, it is important to <b>stretch</b> the genetic sequence a little <b>beyond</b> the limits of the <b>recognition sites</b>, since BbsI is an endo-, not an exonuclease. You can pretty much add whatever nucleotide
+        sequence you find most useful, but since you are having your part synthesized, you might wanna add a standard sequence against which you have <b>suitable primers</b> at hand. This will allow you to amplify your synthesized DNA fragment with a
+        simple PCR. For our <i>EPO</i>, we added a poly-A-tail just to function as an arbitrary place-holder.</p>
+    <p>If you reverse translated your protein sequence, then everything should be fine, but just to double-check - please make sure that there are <b>NO STOP CODONS</b> left at the 3‘ end of your part! This would be detrimental to the successful expression
+        of your fusion protein. If you, by any chance, happen to be designing a L0 part for <b>cloning position B5</b>, then you must forget what I just said and make sure that you <b>DO HAVE</b> a stop codon. B5 is the most downstream part of the resulting
+        transcriptional unit and thus needs to be equipped with a translation terminating sequence.</p>
+    <p>Now we have added our overhangs and recognition sites and are left with a linear DNA sequence that we’ll call <b><i>EPO-B3_B4</i></b>. You’ve done the same? Great! Then there‘s only one more step before our parts are ready for synthesis and that is
+        – double checking!</p>
+    <p><b <i>EPO</i> with BbsI restriction sites and overhangs added:</b><br> aaaagaagacata
+        <b>atg</>ggcgtgcacgagtgcccggcgtggctgtggctgctgctgagcctgctgagcctgccgctgggcctgccggtgctgggcgcgccgccgcgcctgatctgcgacagccgcgtgctggagcgctacctgctggaggcgaaggaggcggagaacatcacgacgggctgcgcggagcactgcagcctgaacgagaacatcacggtgccggacacgaaggtgaacttctacgcgtggaagcgcatggaggtgggccagcaggcggtggaggtgtggcagggcctggcgctgctgagcgaggcggtgctgcgcggccaggcgctgctggtgaacagcagccagccgtgggagccgctgcagctgcacgtggacaaggcggtgagcggcctgcgcagcctgacgacgctgctgcgcgcgctgggcgcgcagaaggaggcgatcagcccgccggacgcggcgagcgcggcgccgctgcgcacgatcacggcggacacgttccgcaagctgttccgcgtgtacagcaacttcctgcgcggcaagctgaagctgtacacgggcgaggcgtgccgcacgggcgac<b>cgc</b>ggttcgnngtcttcaaaa</p>
+    <h2>6. IN SILICO CLONING</2>
+        <p>Before sending any parts off to a sequencing company, let’s first make sure that it will actually behave the way we want it to and that nothing went wrond during the design process. The best way to do this is to employ a <b>software tool</b> of
+            choice and perform an <b><i>in silico</i> digest</b> and ligation of the designed part. For our <i>EPO-B3_B4</i>, we’ll first try and clone it into the respective L0 plasmid backbone, <b>pAGM1287</b>. For more information on which plasmid
+            backbones are needed for what cloning position,check out the parts table at the very top of this page. Secondly, we are going to try and assemble our <i>EPO</i> part into a <b>L1 construct</b> and check the reading frame.</p>
+        <p><b>A. CLONING L0-EPO-B3_B4</b><br> For this <i>in silico</i> digest, simply digest both your genetic part as well as the plasmid backbone with BbsI. If the design is right, you should see your part being assembled into the backbone in the correct
+            direction, taking the place of the <b>LacZ-alpha gene</b>. This exchange is very important for the actual experimental cloning, because, after <i>E. coli</i> transformation, the presence or absence of functional beta-galactosidase acts as
+            a powerful selection tool when screening for transformants with successfully cloned plasmids .</p>
+        [[File: T--TU_Kaiserslautern--L0_EPO_B3_B4.png]]
+
+
+        <p><b>B. CLONING L1-sAP-EPO-Strep8His</b><br> Here we want to test wether our basic part can hold up in a <b>L1 construct</b>, assemble at its designated place and maintain the fusion protein‘s <b>reading frame</b>. As already elaborated in step
+            Nr.4, we’ll pick our <i>L0-EPO-B3_B4</i> to be fused with an N-terminal <b>sAP secretion tag</b> and a C-terminal <b>Strep8His - tag</b> for purification. You can find all the sequences to our <b>MocloMania parts</b> in the iGEM Parts Registry
+            easy peasy. Click <a href=“URL: https://2021.igem.org/Team:TU_Kaiserslautern/Part_Collection“>here</a> for a comprehensive list of all our L0 parts available. Once all of them are within their respective L0 plasmid backbones, simply digest
+            all the parts you want to include in your construct plus our L1 destination vector named <b><i>weird_plex</i></b> with <b>BsaI</b> and let the MoClo magic happen. You should end up with something like depicted below, where once again, the
+            <i>lacZ-alpha</i> fragment of <i>weird_plex</i> has been replaced with your genetic construct. And ideally, your newly designed part should sit comfortably in the cloning position that it was assigned. Last but not least – have your software
+            tool <b>translate</b> the fusion protein, beginning from the very <b>first base triplet</b> of the sAP secretion tag. Ideally, your translated sequence will stretch <b>uninterruptedly</i> across the entire length of your genetic construct only to come to a halt when encountered with the <b>stop codon in B5</b>.
+            Is this the case? Congratulations! You just created your first very own <b>MoClo part</b>! Now all that’s left to do is order it.</p>
+        [[File: T--TU_Kaiserslautern--L1_sAP_EPO_Strep8His.png]]
+
+        <h2>7. ORDER</h2>
+        <p>Now that you have your readily designed and expertly tested MoClo part at hand, all there is left is to order it at your DNA synthesis company of choice! During our project, we relied on the synthesis services provided by <b>IDT</b> where small
+            DNA pieces can be ordered as so-called <b>gBlocks</b>. If your genetic part reaches a certain <b>size</b> (which in the case of a protein like EPO, it definitely did), you might have to adjust your sequence towards the company’s standards
+            in order to make it <b>suitable for synthesis</b>. This might include the elimination of <b>repetitive sequences</b> or <b>GC-rich regions</b>. IDT provides its very own software tool to alter your sequence accordingly, but most of the times
+            it just comes down to tedious <i>base per base</i> typing work. Just be sure to always keep Leishmania’s <b>codon usage table</b> open in another tab and check back in with your amino acid sequence after you’re done. Depending on the size
+            of your gene, it might even be necessary to split it up into separate subparts if you want to make use of a particular sequencing offer. In this case, make sure to equip these subparts with <b>terminal BbsI recognition sites</b> and adjust
+            the separation region in order to allow for seamless reassembly - much like we did with our terminal sites in step Nr. 5! If you have any further questions or need help designing your part, please feel free to <b>reach out to us</b>! We are
+            happy to help!</p>
+
+</div>
+
+</html>
+{{TU_Kaiserslautern/footer}}
+<html>
+</div>
+<script>
+    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+        target: '#scrollspy'
+    })
+</script>
+
+</html>
