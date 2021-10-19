@@ -1,16 +1,4 @@
-* {
-  box-sizing: border-box;
-}
 
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  color: white;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-}
 
 #masterWrap {
   width: 100%;

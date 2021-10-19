@@ -7,6 +7,17 @@
     font-family: Engraver;
     src: url("../dist/fonts/ENGR.ttf")/* TTF file for CSS3 browsers */
 }
+.img-fluid {
+    padding-top:1rem;
+    padding-bottom:1rem;
+}
+.carousel-item >img {
+    object-fit: scale-down;
+    height: auto;
+    margin-left: auto;
+    height: 65vh;
+    border-radius: 0px;
+}
 .tight-list li {
     padding-top:0;
     padding-bottom:0;
@@ -226,7 +237,11 @@ li {
 }
 
 @media (min-width: 1200px) and (max-width: 1800px) {
-    .left-fix {
+    .body .container-md {
+        max-width: 960px;
+        padding-left: 3em;
+    }
+    .body .container-sm {
         max-width: 960px;
         padding-left: 3em;
     }
@@ -326,23 +341,32 @@ object-fit:contain;
 .social-link:hover {
     color: var(--accent)!important;
 }
-
-
 /*footer stuff*/
 
 footer {
     padding-bottom: 5rem;
     padding-top: 3rem;
 }
-
+.footer-sponsors {
+    width:100%;
+}
 .sponsor {
-    padding: 1em 0.4em;
+    padding: 1rem 1rem;
+    margin:1rem 1rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:white;
+    border-radius: 7px;
+    height:100px;
+    width:100px;
 }
 
 .sponsor img {
     border-radius: 7px;
     filter: grayscale(1);
-    transition: all 0.3 ease;
+    transition: 0.5s all ease;
+    width: 75px;
 }
 
 .sponsor img:hover {
@@ -478,9 +502,20 @@ footer {
     padding-top: 3rem;
     padding-bottom: 3rem;
 }
+.figure-t {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
 
 .fig-image {
     width: 100%;
+    text-align:center;
+}
+.fig-image img {
+    width:100%;
 }
 
 .fig-caption {
@@ -539,8 +574,14 @@ footer {
 }
 
 .sponsor-image img {
-    padding: 1rem;
     transition: 0.3s all ease;
+    width: 250px;
+    border-radius: 25px;
+}
+.sponsor-image {
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sponsor-info {
@@ -581,7 +622,6 @@ footer {
 }
 
 .sponsor-card:hover .sponsor-image img {
-    border-radius: 50px;
 }
 section {
     padding:5rem;
@@ -603,7 +643,7 @@ p.big-para {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1 !important; 
+    z-index: 0 !important; 
     top:0;
     left:0;
 }
@@ -613,4 +653,148 @@ p.big-para {
 }
 .home-container .emph:hover {
     text-shadow: 0px 0px 16px var(--darker-accent);
+}
+table {
+    width:100%;
+}
+/* home */
+
+
+#masterWrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  #panelWrap {
+    height: 100%;
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  section {
+    height: 100%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    position: relative;
+    float: left;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    position: relative;
+    background-color: #fff;
+    margin: 12px 8px;
+    cursor: pointer;
+  
+    float: left;
+  }
+  
+  .dots {
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    bottom: 16px;
+  }
+  
+  #leftArrow {
+      left:2em;
+      opacity:0;
+  }
+  
+  #rightArrow {
+      right:2em;
+  
+  }
+  
+  .arrow {
+    position: absolute;
+    z-index: 100!important;
+    bottom:2em;
+    cursor: pointer;
+    opacity: 0.75;
+    width: 50px;
+    height: 50px;
+    stroke-width: 8px;
+    stroke: white;
+    fill: transparent;
+    transition: 0.3s ease all;
+    transform: scale(1);
+  }
+  .arrow:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  .titleWrap {
+    height: 30px;
+    position: absolute;
+    z-index: 20;
+    bottom: 50px;
+    left: 50%;
+    overflow-y: hidden;
+  }
+  
+  .title {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .hideMe {
+    opacity: 0;
+    margin-top:-6vh;
+  }
+  .iconWrap {
+    width: 300px;
+    margin-top: 30px;
+  }
+  
+  @media (min-width: 700px) {
+    .iconWrap {
+      width: 600px;
+    }
+  }
+  .icon {
+    text-align: center;
+    width: 150px;
+    float: left;
+  }
+  
+  .icon svg {
+    width: 50px;
+    height: 50px;
+    margin: 6px 0;
+    overflow: visible;
+  }
+  
+  @media (max-width: 480px) {
+    section img {
+      max-width: 200px;
+    }
+    p {
+      max-width: 180px;
+    }
+  }
+.right-bound {
+    min-width:35vw;
+    width:35vw;
+    padding-left:2rem;
+    padding-right:2rem;
+    padding-bottom:1rem;
+    padding-top:1rem;
+}
+.name-thingy {
+    background: linear-gradient(to left, transparent, var(--accent))!important;
+    padding: 0.5rem;
+padding-left:1rem;
+}
+footer .container-md {
+    padding-left:1rem!important;
+    padding-right:1rem!important;
 }

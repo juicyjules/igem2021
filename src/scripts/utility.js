@@ -7,11 +7,12 @@ function vw(v) {
     return (v * w) / 100;
 }
 const fadeScrollLimit = vh(100)
+const half=vh(50)
 $(document).ready(function () {
     const spypad = $("#header").outerHeight() + $("#navigation").outerHeight() + 30;
-
+    const spypadH = half - ($("#scrollspy").outerHeight()/ 2);
     // Bootstrap animated dropdown
-    $("#scrollspy").css("top", Math.max(0, spypad));
+    $("#scrollspy").css("top", Math.max(spypadH, spypad));
     $('.navbar .dmenu').hover(function () {
             $(this).find('.sm-menu').first().stop(true, true).slideDown(150);
         }, function () {
@@ -22,7 +23,7 @@ $(document).ready(function () {
     });
     // Keep Scrollspy fixed
     $(window).scroll(function(){
-        $("#scrollspy").css("top", Math.max(0, spypad - $(this).scrollTop()));
+        $("#scrollspy").css("top", Math.max(spypadH, spypad - $(this).scrollTop()));
         if (window.scrollY > fadeScrollLimit){
             $("#go-up").css("opacity",1);
         } else {

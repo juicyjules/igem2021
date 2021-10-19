@@ -105,7 +105,6 @@ $(document).ready(function () {
         "retina_detect": true
       });
 
-    console.clear();
     const colorArray = [
         "#683A5E",
         "#262626",

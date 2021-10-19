@@ -92,316 +92,366 @@
     </nav>
     <main>
         <div id="scrollspy" class="scrollspy d-none d-xxl-block">
-            <a class="scrollspy-item list-group-item list-group-item-action" href="#head-1">MoClo-Library</a>
-            <a class="scrollspy-item list-group-item list-group-item-action" href="#head-2">Troubleshooting</a>
-            <a class="scrollspy-item list-group-item list-group-item-action" href="#head-25">Generating Parts</a>
-            <a class="scrollspy-item list-group-item list-group-item-action" href="#head-3">THE SEQUENCE</a>
-            <a class="scrollspy-item list-group-item list-group-item-action" href="#head-4">OPTIMIZING</a>
-            <a class="scrollspy-item list-group-item list-group-item-action" href="#head-5">RECOGNITION</a>
-            <a class="scrollspy-item list-group-item list-group-item-action" href="#head-6">CHOOSING A CLONING</a>
-            <a class="scrollspy-item list-group-item list-group-item-action" href="#head-7">ADD BBSI RESTRICTION</a>
-            <a class="scrollspy-item list-group-item list-group-item-action" href="#head-8">IN SILICO CLONING</a>
-            <a class="scrollspy-item list-group-item list-group-item-action" href="#head-9">ORDER</a>
+            <a class="scrollspy-item list-group-item list-group-item-action" href="#head-1">Design</a>
+            <a class="scrollspy-item list-group-item list-group-item-action" href="#head-2">Construction</a>
+            <a class="scrollspy-item list-group-item list-group-item-action" href="#head-3">Expression</a>
+            <a class="scrollspy-item list-group-item list-group-item-action" href="#head-4">Purification</a>
         </div>
         <div id="go-up"><i class="fa fa-arrow-up"></i></div>
         <div class="jumbotron jumbotron-fluid heading-hero" id="header" style="background: linear-gradient(rgba(0, 0, 0, 0.35), var(--dark) 100%),
-                url(src/resources/imgs/test-2.png) no-repeat center center fixed;">
-            <h1 class="display-1 image-heading color-flip px-1">
-                THE MOCLOMANIA COLLECTION
+                        url(src/resources/imgs/test-2.png) no-repeat center center fixed;">
+        <h1 class="display-1 image-heading color-flip px-1">
+                ENGINEERING SUCCESS
             </h1>
         </div>
-        <div class="container-md my-10 py-5 left-fix" id="text-body">
-            <h2 class="text-heading color-flip" id="head-1">MoClo-Library for future iGEM teams</h2>
-            <p>As a contribution for future iGEM teams we established the Modular Cloning system for the barely researched organism <i>Leishmania tarentolae</i>. We designed and cloned 19 parts which can be put together according to your needs. We decided
-                to design different tags for protein purification and detection (all parts can be seen in parts list). Because of that, future iGEM teams can use this system to express their desired protein in <i>Leishmania tarentolae</i>. The variety
-                of tags we used allows purification and detection of the desired protein via fluorescence microscopy.</p>
-
-            <h2 class="text-heading color-flip" id="head-2">Troubleshooting for dam methylation problem</h2>
-            <p>In the process of finishing our destination vector, we had a problem with cutting a plasmid with a restriction enzyme which was blocked by dam methylation. Because of that, we tried to transform our dam methylated plasmid into the GM48 <i>E. coli</i>                strain which is dam-negative. To our surprise, the transformation did not work as planned, so we decided to try out different transformation conditions and did a lot of troubleshooting as seen in the table below.</p>
-            <p><b>Combinations of different transformation conditions and their outcome.</b></p>
-
-            <div class="TODO">Tabelle</div>
-
-            <p>Our first thought was that the GM48 <i>E. coli</i>l cells were very squeamish, so we raised the time for regeneration after heat shock and started to just pour the cells on preheated agar plates, without success. Applying heat for a shorter
-                duration or lowering of the DNA concentration was also unsuccessful. Increasing the amount of inserted DNA about the factor 130 to 20 µg showed the first successful transformation. To optimize the transformation results we increased the
-                amount of DNA even more and tested if preheating of the agar plates or just pouring of the cells is necessary at all.</p>
-            <p>As a concluded experience for future iGEM teams we found that the biggest factor for transforming dam methylated plasmids into dam-negative <i>E. coli</i> strains is the amount of DNA you insert into the transformation. The efficiency of transformations
-                like this seems to be more than 200 times lower then of transformations of the dam methylated plasmid into a dam-positive <i>E. coli</i> strain like TOP10. Because of that we would advise future iGEM teams, who want to do similar transformations,
-                to increase the amount of inserted DNA by factor 200 at first.</p>
-
-
-            <h2 class="text-heading color-flip" id="head-25">HOW TO GENERATE A GENETIC PART FOR MODULAR CLONING IN LEISHMANIA</h2>
-            <p>3xHA detection tag? Great! mVenus fluorescent tag? Amazing! <br> But all of these basic parts are of little to no use to you if you don’t happen to exactly study our example protein, the Sars-CoV2 receptor binding domain. In the likely case
-                that you don’t, the question remains – how do you make your gene of interest suitable for Modular Cloning in Leishmania, so that you can benefit from the purification and detection tags provided in our kit?</p>
-            <p>Well, it’s a lot simpler that one might think. Let’s walk through the steps of designing, synthesizing and cloning an original L0 part for expression in <i>Leishmana tarentolae</i> together. For demonstration purposes, we’ll pick another <b>exemplary protein</b>.
-                The human glycoprotein <b>erythropoetin</b> (short EPO) seems to be a suitable candidate. It’s a signaling protein produced by fibroblasts in the kidney and induces <b>red blood cell production</b> in the bone marrow. Recombinant EPO is
-                an important biopharmaceutical for the treatment of <b>anaemia</b>, a shortage of red blood cells that often occurs in patients with chronic kidney failure or as a side effect of cancer treatment.</p>
-            <p>So now that we have picked our exemplary protein of interest, our objective is to generate a basic genetic part that is suitable for Modular Cloning and can thus be equipped with a pre-existing purification tag from our MoCloMania collection.
-                Furthermore, the part has to be functionally expressed in <i>Leishmania tarentolae</i>. Let’s get started!</p>
-
-            <h2 class="text-heading color-flip" id="head-3">1. GETTING THE SEQUENCE</h2>
-            <p>The very first step to generating your own basic part is, of course, to get your hands on the actual <b>sequence</b> that <b>encodes your protein of interest</b>. Are you starting a new research project? Or do you already have access to genetic
-                material, say the <i>EPO</i> gene within a plasmid vector? In this case, you have to be aware that <b>adequate codon usage</b> can, at times, be crucial for functional target gene expression and protein folding in the recombinant expression
-                host.
-                <ref> Liu, Y. A code within the genetic code: codon usage regulates co-translational protein folding. Cell Commun Signal 18, 145 (2020). https://doi.org/10.1186/s12964-020-00642-6</ref> Since your gene source might be tailored towards the codon
-                usage bias of another organism, e.g. <i>E. coli</i>, you might consider having your gene of interest <b>newly synthesized</b> for expression in Leishmania either way. As long as this is a financially viable option, of course. If the differences
-                in codon usage appear marginal, e.g. in rather short genetic sequences, a simple PCR might be enough to make your gene suitable for Modular Cloning. You can find more information on this in Step 5.</p>
-            <p>In case you‘ve never worked with your gene of interest before, there is a plethora of online resources to help you find the genetic sequence you are looking for. Of course you have to keep in mind that you want your genetic sequence to only
-                encode
-                <b>proteogenic amino acids</b>, so make sure to <b>pay attention to introns</b> and only get the actual <b>cDNA</b>.</p>
-            <p>In order to retrieve the genetic code for the human EPO protein, we browsed the <b>NCBI gene database</b> and, with a little bit of digging, found the <i>EPO</i> cDNA pretty easily (NCBI gene ID: 2056 -> NCBI reference sequences -> consensus
-                <a href="https://www.ncbi.nlm.nih.gov/gene?Db=gene&Cmd=DetailsSearch&Term=2056"><b>CDS: CCDS5705.1</b></a>). A quick check in the <b>UniProt databank</b> (UniProtKB -
-                <a href="https://www.uniprot.org/uniprot/P01588">
-                    <b>P01588</b></a> (EPO_HUMAN) tells us about the exact amino acid sequence of the human erythropoeitin precursor. It also lets us know that the first 27 amino acids are part of a signal peptide and that there are multiple sites of
-                N-linked as well as O-linked glycosylation.
-            </p>
-            <div class="figure">
-                <div class="fig-image pb-1">
-                    <img src="T--TU_Kaiserslautern--EPO_Amino_Acid_Modifications.png" alt="">
-                </div>
-                <div class="fig-caption">
-                    <span>
-                       Fig Text
-                    </span>
-                </div>
+        <<div class="container-md my-10 py-5" id="text-body">
+        <p>&#160;</p>
+        <p>Since our project revolved around the <b>creation of a <b>genetic parts library</b>, the design, cloning and testing of basic parts was our daily business. Depending on the genetic source of the respective part, the design process either aimed to <b>create a sequence</b> ready for commercial <b>synthesis</b> or to generate a <b>set of primers</b> that would allow for <b>amplification</b> of the desired sequence from a <b>source plasmid</b> via PCR. In order to demonstrate our <b>engineering success</b>, we want to introduce you to one of the <b>most vital parts</b> to our expression system, the <a href=" http://parts.igem.org/Part:BBa_K3781005" class="light-link"><b>sAP secretion tag</b></a>.</p>
+        <p>The sAP tag is a <b>secretion signal peptide</b> derived from the secretory protein <b>secreted acid phosphatase 1 (sAP1)</b> which was originally purified from <i>Leishmania mexicana</i>, a human pathogenic Leishmania strain.<a href="#ref-1" class="source-anchor" id="source-1">[1]</a> It mediates the <b>exocytosis</b> of the protein after its biosynthesis in the endoplasmatic reticulum (ER). This is extremely useful for recombinant protein production, since target proteins can be <b>harvested</b> directly from <b>cell culture supernatant</b> without the need for cell lysis. Since <b>post-translational glycosylation</b> of proteins happens within ER and Golgi apparatus, along the <b>secretory pathway</b><a href="#ref-2" class="source-anchor" id="source-2">[2]</a>, the sAP1 signal peptide tag furthermore enables the <b>production of glycosylated proteins</b> in Leishmania. This was a <b>vital aspect</b> to our project, because we aimed to demonstrate Leishmania’s <b>complex, human-like glycosylation capabilities</b> which make them such a promising <b>expression host</b> for <b>biopharmaceutical proteins</b>. During the realisation of this project, the <b>SARS-CoV-2 receptor binding domain</b> functioned as our exemplary protein of interest. Not only would transgenic expression of the SARS-CoV-2 RBD prove our expression system’s <b>scientific and medical relevance</b>, it would also shine a light on the <b>post-translational modification abilities</b> of Leishmania, since the receptor binding domain is a <b>heavily glycosylated</b> protein domain.</p>
+        <p>So now that you know how important protein secretion is to the objective of our project, it doesn’t come unexpected that most of the <a href=" https://2021.igem.org/Team:TU_Kaiserslautern/Composite_Parts" class="light-link"><b>L1 constructs</b></a> we created with our <a href="https://2021.igem.org/Team:TU_Kaiserslautern/Parts" class="light-link"><b>MocloMania collection</b></a> contain the N-terminal sAP secretion tag. But how did we design it and construct it?</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+            <h2 id="head-1" class="text-heading color-flip">DESIGN</h2>
+        <p>Well, the sequence to this part was directly derived from the commercial <b>pLEXSY_I-blecherry3</b> plasmid, distributed by <b>JenaBioscience</b>, which is the basis to our L1 expression vector <a href="http://parts.igem.org/Part:BBa_K3781105" class="light-link">weird_plex</a>.<br>
+        pLEXSY_I-blecherry3 is a Leishmania expression vector that was specifically designed to allow for either <b>cytosolic</b> or <b>secretory protein expression</b>. The <i>Leishmania mexicana</i> derived <b>sAP secretion signal peptide</b> is thus <b>already included</b> in the plasmid's backbone. JenaBioscience constructed the cloning frame in a way that would allow for either <b>inclusion</b> or <b>exclusion</b> of the signal peptide from the <b>open reading frame</b>, depending on the <b>choice of restriction enzymes</b> used for target protein insertion.<a href="#ref-3" class="source-anchor" id="source-3">[3]</a></p>
+        <p>During the <b>domestication</b> of pLEXSY_I-blecherry3 towards the <b>MoClo system</b>, we <b>introduced</b> a <b>LacZ-alpha</b> gene, but <b>eliminated</b> the <b>sAP secretion sequence</b>. Instead, the sequence was adapted and turned into a functional <b>L0 basic part</b>, the <a href=" http://parts.igem.org/Part:BBa_K3781005" class="light-link">sAP secretion tag</a> that we are looking at right now. This way, <b>switching</b> between cytosolic and secretory protein expression can be even more <b>easily coordinated</b>, simply by adding or leaving out parts in a <b>MoClo reaction</b>.</p>
+        <p>The very first step in our endeavour to create this part was to find its sequence within the pLEXSY_I-blecherry3 backbone and double-check it with protein sequence data found on online resources such as <i>UniProt</i>, see <i>Figures 1</i> and <i>2</i>.</p>
+        <br>
+        <div class="figure">
+            <div class="fig-image pb-1 h-50">
+                <img style="height:50vh" class="w-auto" src="http://parts.igem.org/wiki/images/0/04/T--TU_Kaiserslautern--Engineering_UniProt.png" alt="">
             </div>
-            <br>
-            <br>
-            <b>GENETIC SEQUENCE</b> Human <i>EPO</i> <b>582 bp</b>
-            <p>
-                ATGGGGGTGCACGAATGTCCTGCCTGGCTGTGGCTTCTCCTGTCCCTGCTGTCGCTCCCTCTGGGCCTCC CAGTCCTGGGCGCCCCACCACGCCTCATCTGTGACAGCCGAGTCCTGGAGAGGTACCTCTTGGAGGCCAA GGAGGCCGAGAATATCACGACGGGCTGTGCTGAACACTGCAGCTTGAATGAGAATATCACTGTCCCAGAC ACCAAAGTTAATTTCTATGCCTGGAAGAGGATGGAGGTCGGGCAGCAGGCCGTAGAAGTCTGGCAGGGCC
-                TGGCCCTGCTGTCGGAAGCTGTCCTGCGGGGCCAGGCCCTGTTGGTCAACTCTTCCCAGCCGTGGGAGCC CCTGCAGCTGCATGTGGATAAAGCCGTCAGTGGCCTTCGCAGCCTCACCACTCTGCTTCGGGCTCTGGGA GCCCAGAAGGAAGCCATCTCCCCTCCAGATGCGGCCTCAGCTGCTCCACTCCGAACAATCACTGCTGACA CTTTCCGCAAACTCTTCCGAGTCTACTCCAATTTCCTCCGGGGAAAGCTGAAGCTGTACACAGGGGAGGC
-                CTGCAGGACAGGGGACAGATGA
-            </p>
-
-            <b>AMINO ACID SEQUENCE</b> Human <i>EPO</i> <b>193 aa</b>
-            <p>MGVHECPAWLWLLLSLLSLPLGLPVLGAPPRLICDSRVLERYLLEAKEAENITTGCAEHCSLNENITVPD TKVNFYAWKRMEVGQQAVEVWQGLALLSEAVLRGQALLVNSSQPWEPLQLHVDKAVSGLRSLTTLLRALG AQKEAISPPDAASAAPLRTITADTFRKLFRVYSNFLRGKLKLYTGEACRTGDR
-            </p>
-            <p>Now that we have our proteogenic DNA sequence as well as our desired amino acid sequence, we can move on to the <b>second step</b>.</p>
-            <h2 class="text-heading color-flip" id="head-4">2. OPTIMIZING CODON USAGE</h2>
-            <p>Thanks to the work of many smart bioinformaticians, handling the different molecular states of a piece of biological information has never been easier. A variety of <b>online tools</b> allows for easy <b>manipulation</b> and <b>transformation</b>                of DNA, RNA as well protein sequences at will. One of these services is particularly useful when it comes to <b>codon optimization</b>. The <i><b>Reverse Translate</b></i> tool of the <b>Sequence Manipulation Suite</b> (SMS) website generates
-                DNA sequences based on the a protein sequence input, all the while employing a codon usage bias of choice. As mentioned before, the codon usage bias may critically affect an organism’s capability to express recombinant genetic material.
-                So in order to make our <i>EPO</i> suitable for expression in <i>Leishmania tarentolae</i>, we’ll have to <b>reverse translate</b> our amino acid sequence while <b>employing <i>Leishmania tarentolae</i> codon usage</b>. In reality, this
-                is just a few clicks of work. The following tutorial will give you a quick overview as to how it might look on your screen:</p>
-            <div class="figure">
-                <div class="fig-image pb-1">
-                    <img src="T—TU_Kaiserslautern—SMS_tool" alt="">
-                </div>
-                <div class="fig-caption">
-                    <span>
-                       Fig Text
-                    </span>
-                </div>
+            <div class="fig-caption">
+                <span>
+                    Amino acid sequence of <i>Leishmania mexicana</i>'s <b>secreted acid phosphatase 1</b> with highlighted <b>secretion signal peptide</b> sequence &#124;  SOURCE &#124; <i>UniProt</i>
+                </span>
             </div>
-            <p>Visit <a href="https://www.bioinformatics.org/sms2/rev_trans.html">this website</a> run by the Sequence Manipulation Suite and paste your desired amino acid sequence into the <b>upper input field</b>. Next, the tool needs a <b>codon usage table</b>                that it can base its reverse translation on. You can either just use the one that we provide <a href="HOW TO HANDLE LEISHMANIA, CODON USAGE TABLE">here</a> or you can find it for yourself by clicking the link on the website forwarding
-                you to the <a href="https://www.kazusa.or.jp/codon/"><b>Codon Usage Database</b></a>.</p>
-            <div class="figure">
-                <div class="fig-image pb-1">
-                    <img src="T—TU_Kaiserslautern—Codon_Usage_Database_tool.png" alt="">
-                </div>
-                <div class="fig-caption">
-                    <span>
-                       Fig Text
-                    </span>
-                </div>
-            </div>
-            <p>Here you will find a <b>QUERY box </b> in which you can simply search for <i><b>Leishmania tarentolae</b></i>, our desired expression host, and then pick the <b>whole genome</b> codon usage. Now you should be seeing something like this:</p>
-            <div class="figure">
-                <div class="fig-image pb-1">
-                    <img src="T—TU_Kaiserslautern—Codon_Usage_Table_View _tool.png" alt="">
-                </div>
-                <div class="fig-caption">
-                    <span>
-                       Fig Text
-                    </span>
-                </div>
-            </div>
-            <p>While this is clearly the right table, it is not in the right formatting yet. The <i>Reverse Translate</i> tool requires codon usage tables to obey the <b>GCG format</b>. To achieve this, you must choose a genetic code which, in our case,
-                is that of a protozoan, so pick <b>Nr. 4</b>. Then make sure to highlight the <b>CodonFrequency output</b> in <b>GCG Wisconsin Package™</b>, click submit and you’re good to go. By now, you should have ended up with a table looking like
-                this:
-            </p>
-            <div class="figure">
-                <div class="fig-image pb-1">
-                    <img src="T—TU_Kaiserslautern—Codon_Usage_Table_Final.png" alt="">
-                </div>
-                <div class="fig-caption">
-                    <span>
-                       Fig Text
-                    </span>
-                </div>
-            </div>
-            <p>This is exactly what we are looking for! So just go ahead, copy all of it (including the header row) and paste it back into the <b>lower input field</b> of the <i>Reverse Translate</i> page. Now the time has finally come for some good old
-                reverse translation. Simply hit the submit button and ta-da:</p>
-            <div class="figure">
-                <div class="fig-image pb-1">
-                    <img src="T—TU_Kaiserslautern—Reverse_Translate_Pop_Up.png" alt="">
-                </div>
-                <div class="fig-caption">
-                    <span>
-                       Fig Text
-                    </span>
-                </div>
-            </div>
-            <p>You should be faced with something like this. This little pop-up contains a ton of information, but only the very <b>first paragraph</b> is of interest to us, the one showing the reverse translation to a sequence of <b>most likely codons</b>.
-                You can simply copy this sequence and paste it somewhere safe and boom– you have your genetic sequence optimized for <i>Leishmanania tarentolae</i>.</p>
-            <p><b>codon optimized <i>EPO</i>:</b></p>
-            <p style="word-wrap: break-word;">
-                atgggcgtgcacgagtgcccggcgtggctgtggctgctgctgagcctgctgagcctgccgctgggcctgccggtgctgggcgcgccgccgcgcctgatctgcgacagccgcgtgctggagcgctacctgctggaggcgaaggaggcggagaacatcacgacgggctgcgcggagcactgcagcctgaacgagaacatcacggtgccggacacgaaggtgaacttctacgcgtggaagcgcatggaggtgggccagcaggcggtggaggtgtggcagggcctggcgctgctgagcgaggcggtgctgcgcggccaggcgctgctggtgaacagcagccagccgtgggagccgctgcagctgcacgtggacaaggcggtgagcggcctgcgcagcctgacgacgctgctgcgcgcgctgggcgcgcagaaggaggcgatcagcccgccggacgcggcgagcgcggcgccgctgcgcacgatcacggcggacacgttccgcaagctgttccgcgtgtacagcaacttcctgcgcggcaagctgaagctgtacacgggcgaggcgtgccgcacgggcgaccgc
-            </p>
-            <h2 class="text-heading color-flip" id="head-5">3. CHECKING FOR RECOGNITION SITES</h2>
-            <p>Now you think you might be ready for finally getting down to business, huh? WRONG! There is one more <b>essential step</b> missing. We now made sure that our genetic sequence matches Leishmania’s requirements for adequate gene expression.
-                But does it match the criteria necessary for usage in <b>Modular Cloning</b> reactions? </p>
-            <p>While MoClo certainly comes with a lot of advantages - mainly its simply experimental set-up, efficiency and of course its modularity - it also comes with a <b>downside</b>. The genetic parts employed within a MoClo reaction must always be
-                free of any <b>intrinsic BsaI/BbsI recognition sites</b>. These two type II S restriction enzymes are the enzymatic foundation to the entire Modular Cloning method and it is of utmost importance to <b>eliminate</b> any „wild" recognition
-                sites within our gene of interest, because otherwise our genetic part might just be cut into a thousand pieces once we try to actually make use of it. We certainly do not want that to happen, so let’s make sure to employ our software of
-                choice in order to check for any endogenous BsaI/BbsI recognition sites within our optimized DNA sequence.</p>
-            <div class="figure">
-                <div class="fig-image pb-1">
-                    <img src=" [[File:T—TU_Kaiserslautern—EPO_Restriction_Sites.png" alt="">
-                </div>
-                <div class="fig-caption">
-                    <span>
-                       Fig Text
-                    </span>
-                </div>
-            </div>
-            <p>Did you find any?</p>
-            <p><b>NOPE</b>. Well, aren’t you lucky! As you can see in the image above, our erythropoeitin contained a lot of recognition sites, but none for either BsaI or BbsI. Which means that we can jump right to the next step, <b>step Nr.4.</b></p>
-            <p><b>YESSS</b>. Now that’s a bummer! Due to the codon optimization, intrinsic BsaI/BbsI restriction sites should be rather rare. If you still happen to stumble upon one, don’t fret! After all, you’re having the part synthesized which means that
-                you have total control over the nucleotide make-up of its sequence. Take a closer look at the intrinsic recognition site and try to introduce <b>silent mutations</b> that will disrupt the recognition motif. Meanwhile, always keep an eye
-                on the <b>codon usage table</b> to ensure that you’re not messing with the amino acid sequence itself.</p>
-            [[T--TU_Kaiserslautern--Mutation_Intrinsic_Restriction_Site.png]]
-            <p>Let’s say your gene of interest contains the sequence <i>GAGAAGACG</i>. An intrinsic BbsI site that nobody saw coming! A quick peak at <i>Leishmania tarentolae</i>‘s codon usage table will tell you that <i>GAG</i> codes for the amino acid
-                glutamic acid, appearing around 49 times among 1000 codons of the Leishmania transcriptome. The triplet <i>GAA</i> also codes for glutamic acid, even though it only appears a mere 11 times among 1000 codons. But introducing a codon that‘s
-                a little less favorable is a much better trade-off than having your genetic part cut into shreds by the restriction enzymes. So let’s just switch <i>GAG</i> to <i>GAA</i> and we’re good to go! We can proceed with <b>step Nr.4</b>.</p>
-            <h2 class="text-heading color-flip" id="head-6">4. CHOOSING A CLONING POSITION</h2>
-            <p>Now it’s time for some hands-on MoClo action. Have you thought about what <b>cloning position</b> you want to put your gene of interest into? It really depends on your indivdual experimental needs and on the pre-existing parts that you might
-                be utilizing from our <b>MoCloMania collection</b>.</p>
-            <p>For <b>erythropoeitin</b>, we know that the protein is subject to multiple <b>glycosylations</b>, so we’ll want to employ the
-                <a href="http://parts.igem.org/Part:BBa_K3781005"><b>sAP-tag secretion peptide</b></a> that will steer our protein into the secretory pathway and make sure that it gets all the glycosylation action it needs. Beyond that, a purification
-                tag such as the
-                <a href="http://parts.igem.org/Part:BBa_K3781017"><b>Strep8His-tag</b></a> would be cool because it will allow for easy purification of our EPO from the cell culture supernatant. Checking back with our MoCloMania collection, the cloning
-                position <b>B3_B4</b> seems to be a reasonable choice for our <i>EPO</i> part. Knowing this, we can simply take a look at the <b>overhang table</b> (at the very top of this wiki page) and see that we’ll need to add <i>AATG</i> to the 5‘
-                end of the <i>EPO</i> gene and <i>TTCG</i> to its 3‘ end. Confused as to where these funky four nucleotide sequences are coming from? Check out our page on <a href="https://2021.igem.org/Team:TU_Kaiserslautern/Description">Modular Cloning</a>                for more detailed explanations!</p>
-            <p>Once you’ve chosen your desired cloning position and taken note of the respective overhangs, we can move on to <b>step Nr. 5</b>.</p>
-            <h2 class="text-heading color-flip" id="head-7">5. ADD BBSI RESTRICTION SITES</h2>
-            <p>Wait –in step 3 we were told to eliminate all possible BbsI restriction sites and now we’re supposed to add new ones back in? I promise there is method to this madness! The new <b>BbsI restriction sites</b> will be added on the very ends of
-                our gene of interest, along with the respective <b>4 nucleotide overhangs</b>. Why BbsI, you’re asking? Check our page on <a href="https://2021.igem.org/Team:TU_Kaiserslautern/Description">Modular Cloning</a> for more information. Basically,
-                the restriction sites will allow us to assemble the gene part into a <b>L0 plasmid backbone</b>. This will not only make sure that the part is actually equipped with the right overhangs, it will also allow for its
-                <b>storage</b> in a stable form over long periods of time, e.g. in your very own <b>MoClo library</b>. </p>
-            <p>BbsI has the recognition site <i>GAAGAC NN XXXX</i>, with NN being two arbitrary bases and XXXX being the four nucleotide overhang that is left after cleavage. We need this overhang to be exactly the overhangs that are attributed to the MoClo
-                <b>cloning position</b> the part is supposed to fill. This is vital, because it allows our part to be assembled with other basic parts in the correct, pre-determined order. For starters, we can help ourselves by <b>highlighting</b> the
-                <b>very first</b> and <b>last base triplet</b> of our sequence of interest. Now when it comes to the addition of the overhangs, let’s look at both of them individually:</p>
-            <p><b>A. B2/B3 – AATG</b><br> On the 5‘ end of our <i>EPO</i>, we need to have the overhang <i>AATG</i>. Looking at the genetic sequence, we can see that the very first base triplet is already an <i>ATG</i>, coding for the amino acid methionine.
-                This is very helpful because all we need to do is add an additional <i>A</i> in front of the sequence and we’ve already got our overhang down. Now all there is left to do is fill in two random nucleotides and then introduce the BbsI recognition
-                site. Going off the <b>leading strand</b>, you can remember that the <b>5‘ end</b> will always carry the recognition site as <i>GAAGAC NN  XXXX</i>.</p>
-            <div class="figure">
-                <div class="fig-image pb-1">
-                    <img src="T--TU_Kaiserslautern--EPO_BbsI+Overhangs.png" alt="">
-                </div>
-                <div class="fig-caption">
-                    <span>
-                       Fig Text
-                    </span>
-                </div>
-            </div>
-            <p><b>B. B4/B5 – TTCG</b><br> We’ve decided for our <i>EPO</i> part to stretch across cloning positions <b>B3</b> as well as <b>B4</b>, meaning that the next overhang we have to consider is the one inbetween B4 and B5, namely <i>TTCG</i>. Now
-                things are a little different here. We can’t just attach <i>TTCG</i> to the 3‘ end of our gene of interest, because this would mess up the <b>downstream reading frame</b> pretty badly. In the overhang table, the underline within the overhang
-                represents the codon that is read <b>in-frame</b>. It says <i>T<u>TCG</u></i>, meaning that <i>TCG</i> ought to be in-frame with our gene of interest. In order to guarantee this, we have to squeeze <b>two more nucleotides</b> inbetween
-                the 3‘ end of our gene and the beginning of the overhang. Together, with the initial T of the overhang, they have to form a functional codon. And ideally, this codon translates to a small residue amino acid that will not mess with the
-                higher structures of our resulting fusion protein. A quick look at <i>Leishmania tarentolae</i>’s codon usage table reveals that <i>GGT</i>, coding for <b>glycine</b>, should be a viable option. So to the 3‘ end of our <i>EPO</i>, we’ll
-                add <i>GGTTCG</i>, followed by two arbitrary nculeotides and then the BbsI recognition site. Going off the leading strand, you can remember that the <b>3‘ end</b> will always carry the recognition site as XXXX NN GTCTTC.</p>
-            <p>Additionally to your recognition site, it is important to <b>stretch</b> the genetic sequence a little <b>beyond</b> the limits of the <b>recognition sites</b>, since BbsI is an endo-, not an exonuclease. You can pretty much add whatever nucleotide
-                sequence you find most useful, but since you are having your part synthesized, you might wanna add a standard sequence against which you have <b>suitable primers</b> at hand. This will allow you to amplify your synthesized DNA fragment
-                with a simple PCR. For our <i>EPO</i>, we added a poly-A-tail just to function as an arbitrary place-holder.</p>
-            <p>If you reverse translated your protein sequence, then everything should be fine, but just to double-check - please make sure that there are <b>NO STOP CODONS</b> left at the 3‘ end of your part! This would be detrimental to the successful
-                expression of your fusion protein. If you, by any chance, happen to be designing a L0 part for <b>cloning position B5</b>, then you must forget what I just said and make sure that you <b>DO HAVE</b> a stop codon. B5 is the most downstream
-                part of the resulting transcriptional unit and thus needs to be equipped with a translation terminating sequence.</p>
-            <p>Now we have added our overhangs and recognition sites and are left with a linear DNA sequence that we’ll call <b><i>EPO-B3_B4</i></b>. You’ve done the same? Great! Then there‘s only one more step before our parts are ready for synthesis and
-                that is – double checking!</p>
-            <p><b><i>EPO</i> with BbsI restriction sites and overhangs added:</b><br> </p>
-            <p style="word-wrap: break-word;">
-                aaaagaagacataatgggcgtgcacgagtgcccggcgtggctgtggctgctgctgagcctgctgagcctgccgctgggcctgccggtgctgggcgcgccgccgcgcctgatctgcgacagccgcgtgctggagcgctacctgctggaggcgaaggaggcggagaacatcacgacgggctgcgcggagcactgcagcctgaacgagaacatcacggtgccggacacgaaggtgaacttctacgcgtggaagcgcatggaggtgggccagcaggcggtggaggtgtggcagggcctggcgctgctgagcgaggcggtgctgcgcggccaggcgctgctggtgaacagcagccagccgtgggagccgctgcagctgcacgtggacaaggcggtgagcggcctgcgcagcctgacgacgctgctgcgcgcgctgggcgcgcagaaggaggcgatcagcccgccggacgcggcgagcgcggcgccgctgcgcacgatcacggcggacacgttccgcaagctgttccgcgtgtacagcaacttcctgcgcggcaagctgaagctgtacacgggcgaggcgtgccgcacgggcgac<b>cgc</b>ggttcgnngtcttcaaaa</p>
-            </p>
-            <h2 class="text-heading color-flip" id="head-8">6. IN SILICO CLONING</h2>
-            <p>Before sending any parts off to a sequencing company, let’s first make sure that it will actually behave the way we want it to and that nothing went wrond during the design process. The best way to do this is to employ a <b>software tool</b>                of choice and perform an <b><i>in silico</i> digest</b> and ligation of the designed part. For our <i>EPO-B3_B4</i>, we’ll first try and clone it into the respective L0 plasmid backbone, <b>pAGM1287</b>. For more information on which plasmid
-                backbones are needed for what cloning position,check out the parts table at the very top of this page. Secondly, we are going to try and assemble our <i>EPO</i> part into a <b>L1 construct</b> and check the reading frame.</p>
-            <p><b>A. CLONING L0-EPO-B3_B4</b><br> For this <i>in silico</i> digest, simply digest both your genetic part as well as the plasmid backbone with BbsI. If the design is right, you should see your part being assembled into the backbone in the
-                correct direction, taking the place of the <b>LacZ-alpha gene</b>. This exchange is very important for the actual experimental cloning, because, after <i>E. coli</i> transformation, the presence or absence of functional beta-galactosidase
-                acts as a powerful selection tool when screening for transformants with successfully cloned plasmids .</p>
-            <div class="figure">
-                <div class="fig-image pb-1">
-                    <img src=" T--TU_Kaiserslautern--L0_EPO_B3_B4.png" alt="">
-                </div>
-                <div class="fig-caption">
-                    <span>
-                       Fig Text
-                    </span>
-                </div>
-            </div>
-
-
-            <p><b>B. CLONING L1-sAP-EPO-Strep8His</b><br> Here we want to test wether our basic part can hold up in a <b>L1 construct</b>, assemble at its designated place and maintain the fusion protein‘s <b>reading frame</b>. As already elaborated in step
-                Nr.4, we’ll pick our <i>L0-EPO-B3_B4</i> to be fused with an N-terminal <b>sAP secretion tag</b> and a C-terminal <b>Strep8His - tag</b> for purification. You can find all the sequences to our <b>MocloMania parts</b> in the iGEM Parts
-                Registry easy peasy. Click <a href="https://2021.igem.org/Team:TU_Kaiserslautern/Part_Collection">here</a> for a comprehensive list of all our L0 parts available. Once all of them are within their respective L0 plasmid backbones, simply
-                digest all the parts you want to include in your construct plus our L1 destination vector named <b><i>weird_plex</i></b> with <b>BsaI</b> and let the MoClo magic happen. You should end up with something like depicted below, where once
-                again, the
-                <i>lacZ-alpha</i> fragment of <i>weird_plex</i> has been replaced with your genetic construct. And ideally, your newly designed part should sit comfortably in the cloning position that it was assigned. Last but not least – have your software
-                tool <b>translate</b> the fusion protein, beginning from the very <b>first base triplet</b> of the sAP secretion tag. Ideally, your translated sequence will stretch <b>uninterruptedly</i> across the entire length of your genetic construct only to come to a halt when encountered with the <b>stop codon in B5</b>.
-                Is this the case? Congratulations! You just created your first very own <b>MoClo part</b>! Now all that’s left to do is order it.</p>
-            <div class="figure">
-                <div class="fig-image pb-1">
-                    <img src=" T--TU_Kaiserslautern--L1_sAP_EPO_Strep8His.png" alt="">
-                </div>
-                <div class="fig-caption">
-                    <span>
-                       Fig Text
-                    </span>
-                </div>
-            </div>
-
-            <h2 class="text-heading color-flip" id="head-9">7. ORDER</h2>
-            <p>Now that you have your readily designed and expertly tested MoClo part at hand, all there is left is to order it at your DNA synthesis company of choice! During our project, we relied on the synthesis services provided by <b>IDT</b> where
-                small DNA pieces can be ordered as so-called <b>gBlocks</b>. If your genetic part reaches a certain <b>size</b> (which in the case of a protein like EPO, it definitely did), you might have to adjust your sequence towards the company’s
-                standards in order to make it <b>suitable for synthesis</b>. This might include the elimination of <b>repetitive sequences</b> or <b>GC-rich regions</b>. IDT provides its very own software tool to alter your sequence accordingly, but most
-                of the times it just comes down to tedious <i>base per base</i> typing work. Just be sure to always keep Leishmania’s <b>codon usage table</b> open in another tab and check back in with your amino acid sequence after you’re done. Depending
-                on the size of your gene, it might even be necessary to split it up into separate subparts if you want to make use of a particular sequencing offer. In this case, make sure to equip these subparts with <b>terminal BbsI recognition sites</b>                and adjust the separation region in order to allow for seamless reassembly - much like we did with our terminal sites in step Nr. 5! If you have any further questions or need help designing your part, please feel free to <b>reach out to us</b>!
-                We are happy to help!</p>
-
-
-
         </div>
+      
+        <div class="figure">
+            <div class="fig-image pb-1">
+                <img src="http://parts.igem.org/wiki/images/e/e2/T--TU_Kaiserslautern--Engineering_pLEX_Sequence.png" alt="">
+            </div>
+            <div class="fig-caption">
+                <span>
+                    Genetic sequence and amino acid sequence of the sAP secretion signal peptide as found in the pLEXSY_I-blecherry3 backbone
+                </span>
+            </div>
+        </div>
+        <br>
+        <p>After confirming the exact position of the sequence within the pLEXSY_I-blecherry3 backbone, we had to retrieve it from the plasmid prior to starting the domestication process. For this, we designed a <b>specified set of primers</b> called <i>sAP-forward</i> and <i>sAP-reverse</i> that would allow for <b>amplification</b> of the sAP sequence via PCR while simultaneously introducing specified <b>four nucleotide overhangs</b> and <b>BbsI restriction sites</b> to the sequence. These additions are what make the sequence suitable for application within our <b>Modular Cloning system</b>. <br> In order for the sAP secretion tag to actually be functional, it has to be attached to the target protein's very <b>N-terminal region</b>. Thus, we decided to adapt the part to <b>B2</b>, our <b>most upstream cloning position</b>. This meant that the respective overhangs that needed to be attached were <i>CCAT</i> to the <b>5' end</b> and <i>AATG</i> to the <b>3'</b> end of our sequence. For more information on primer design as well as overhang choice, feel free to check out our tutorial on <a href=" https://2021.igem.org/Team:TU_Kaiserslautern/Contribution" class="light-link"><b>how to</b></a> generate a Moclo part.
+        <br>
+    
+        <div class="figure-t">
+            <div class="fig-image pb-1">
+                <img src="https://parts.igem.org/wiki/images/8/8c/T--TU_Kaiserslautern--Overhang_Table_Purple.png" alt="">
+            </div>
+            <div class="caption">
+                <span>
+                   <b>Table 1:</b> Table displaying compostion of the primers used for amplification and Moclo adaptation of the sAP signal peptide sequence 
+                </span>
+            </div>
+        </div>
+
+        <br>
+        <p>We tested our primer design by going through the entire <b>amplification</b> and <b>cloning process</b> <b><i>in silico</i></b>. When we found everything to work out well <i>theoretically</i>, it was time to actually <b>order the primers</b>. We also set up an experimental plan for the upcoming weeks.
+        <br>
+          <div class="important-warning">
+        <p><b>EXPERIMENTAL PLAN</b></p>
+        <p><b>1</b> &#124; PCR with ensuing gel electrophoresis and extraction
+        <br> <b>2</b> &#124; Moclo ligation of extracted fragment into B2 plasmid backbone
+        <br> <b>3</b> &#124; Transformation, plasmid prep and test digest to confirm successful insertion
+        <br> <b>4</b> &#124; Assembly of resulting L0_sAP_B2 into L1 construct
+        <br> <b>5</b> &#124; Transformation, plasmid prep and test digest to confirm successful assembly
+        <br> <b>6</b> &#124; Transfection into <i>Leishmania tarentolae</i> cell culture
+        <br> <b>7</b> &#124; Investigation of protein expression via immunostaining on western blot</p>
+        </div>
+        <br> <p>So upon <b>arrival of the primers</b>, we were ready to get going!</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <h2 id="head-2" class="text-heading color-flip">CONSTRUCTION</h2>
+        <p>Right after arrival of the primers, we resuspended and diluted them to the desired concentration and then conducted a <b>standard PCR amplification</b> reaction using NEB's <b>Q5 Polymerase</b>. As a <b>template</b>, we used the unprocessed <b>pLEXSY_I-blecherry3</b> plasmid. After completion of the thermocycling process, we loaded the resulting PCR sample onto a <b>2% agarose gel</b>, accompanied by the Thermofisher LowRange GeneRuler. We did this because thanks to our <i>in silico</i> amplification we knew that we were expecting a small, <b>100 bp fragment</b>.
+        
+            <div class="figure">
+                <div class="fig-image pb-1 text-center">
+                    <img class="w-100" src="http://parts.igem.org/wiki/images/f/f9/T--TU_Kaiserslautern--Engineering_sAP_PCR.png" alt="">
+                </div>
+                <div class="fig-caption">
+                    <span>
+                        Gel electrophoresis of PCR fragment</b><br>
+                        <b>1</b> &#124; PCR <i>sAP-forward</i> + <i>sAP-reverse</i> on <i>pLEXSY_I-blecherry3</i> 
+                        <b>L</b> &#124; Thermofisher LowRange GeneRuler [bp]
+                    </span>
+                </div>
+            </div>
+            <div class="figure">
+        
+        <p>We were infact able to observe the predicted 100 bp fragment on the gel which meant that we were able to continue in our experimental process. By <b>extracting</b> the <b>fragment</b> from the aragose gel with the help of a MACHEREY-NAGEL <i>Gel Extraction Kit</i> we recovered the PCR fragment, <b>free</b> from any <b>residual template DNA</b> or enzymes present in the PCR reaction. This allowed us to directly introduce the recovered fragment into a <b>MoClo ligation reaction</b> in order to insert it into <a href="http://parts.igem.org/Part:BBa_K3781100" class="light-link"><b>pAGM1276</b></a>, the <b>B2 plasmid backbone</b> adapted from the <b>Weber MoClo plasmid collection</b>.<a href="#ref-4" class="source-anchor" id="source-4">[4]</a> Introduction into a plasmid backbone doesn't only preserve our fragment from <b>degradation</b>, it also helps us to evaluate wether the obtained PCR fragment was amplified accurately and really carries the <b>desired overhangs</b>.</p>
+        <p>As a means of demonstration, we have included a <b>standard MoClo Ligation</b> protocol that we used pretty much universally when it came to generation of L0 basic parts. For a MoClo reaction to be efficient, it is important to add all genetic components, backbone as well as insert, in equal stoichiometric quantities. For many protocols this is <b>40 fmol</b>, but other values such as 20 fmol are published as well. <a href="#ref-5" class="source-anchor" id="source-5">[5]</a>. Thanks to <b>photometry</b>, we were able to quantify the <b>concentrations</b> of our pAGM1276 as well as of our gel-excised sAP-fragment. With the help of the <b>Bioline</b> <a href="https://www.bioline.com/media/calculator/01_07.html" class="light-link"><b>online molar quantity calculator</b></a>, this allowed us to predict the exact <b>sample volume</b> that needed to be added to the reaction mix in order to give <b>40 fmol sample molecules</b> each.</p>
+        <br>
+         <div class="important-warning">
+        <p><b>L0 MoClo ligation</b> &#124; 20 µL reaction volume</p>
+        <p>2 µL &#124; <b>10x NEB CutSmart-Buffer</b>
+        <br>
+        2 µL &#124; <b>ATP</b>    
+        <br>
+        0,5 µL &#124; <b>BbsI</b>     
+        <br>
+        0,5 µL &#124; <b>T4 DNA Ligase</b>
+        <br>
+        40 fmol &#124; <b>sAP-Fragment</b>
+        <br>
+        40 fmol &#124; <b>pAGM1276</b>
+        <br>
+        fill up &#124; <b>ddH2O</b></p>
+        </div>
+        <br>
+        <br>
+        <p>After addition of all reactants (enzymes last), the reaction mix was <b>briefly vortexed</b>, <b>spun down</b> and then put into a <b>thermocycler</b> to undergo the standard <b>Moclo cycling process</b>. Every protocol does this a little differently, but the basic cycle program is always the same.</p>
+        <br>
+        <div class="important-warning">
+        <p><b>L0 MoClo ligation</b> &#124; Thermocycling program </p>
+        
+        <b>45x</b><br>--------------------------------<br>
+        <b>37°C</b> &#124; 2 min &#124; <b>16°C</b> &#124; 5 min<br>
+        --------------------------------<br>
+        <b>1x</b><br>
+        --------------------------------<br>
+        <b>37°C</b> &#124; 5 min<br>
+        <b>80°C</b> &#124; 10 min<br>
+        <b>16°C</b> &#124; indefinitely<br>
+        --------------------------------
+        </div>
+        <br>
+        <p>After completion of the MoClo thermocycling run (usually performed <b>over night</b>), <b>10 µL</b> of the resulting sample were transformed into <b>competent TOP10 <i>E. Coli</i></b>. This <i>E. Coli</i> strain allows for rapid and efficient <b>amplification</b> of the hopefully ligated <b>L0 construct</b> and is also suitable for <b>blue-white screening</b>. Since our goal was to insert the <b>sAP sequence</b> into the <b>B2 backbone</b> pAGM1276, we will proceed to call the cloned construct <b>L0_sAP_B2</b>, according to our standardized <b>MocloMania nomenclature</b>. 
+        <p>After transformation of the sample and incubation of the transformed <i>E. Coli</i> at 37°C over night on an <b>IPTG/XGal-agar plate</b>, white and blue colonies could be observed the next morning. Because the <b><i>lacZ-alpha</i> gene fragment</b> in pAGM1276 is <b>excised</b> upon insertion of the sAP-fragment, the resulting transformants don't have all the parts it takes to produce functional <b>beta-galactosidase</b>. This means that the <b>white colonies</b> are the ones carrying our <b>successfully cloned construct</b>. We inoculated several of them into liquid culture and let it grow on a shaker at 37°C over night. Both the LB medium for the agar plates as well as for the liquid culture had <b>spectinomycin</b> added, since this is the antibiotic that our <b>L0 plasmid backbones</b> carry a <b>resistance</b> against.</p>
+        <p>The next morning, the liquid cultures showed substantial growth and could be prepped with the help of a MACHEREY-NAGEL <i>DNA MiniPrep Kit</i>. This way, the replicated L0_sAP_B2 construct could be extracted from the <i>E. Coli</i> cells and purified. We ended up with our purified, (hopefully) correctly assembled L0 construct in a microfuge tube on ice. Now in order to <b>verify</b> that the DNA in our tube is really the construct we are looking for and not just some random <i>E. Coli</i> plasmid, we performed a <b>test digest</b>. Again, going through this process <i>in silico</i> was very helpful to us, because it allowed us to easily plan the most feasible digest, rendering the <b>most distinct band pattern</b> and only requiring <b>easily applicable enzymes</b> with high activity in the same buffer. We finally settled on a digest using <b>BstEII</b> as well as <b>XhoI</b>. Doing a <b>double digest</b> like this was particularly handy, because XhoI cuts <b>within the actual sAP sequence</b>. This means that the <b>successfully cloned construct</b> would result in <b>two bands</b>, whereas the <b>empty pAGM1276 backbone</b> could only be <b>linearized</b>.</p>
+        <br>
+        <div class="important-warning">
+        <p><b>Test digest</b> &#124; 20 µL reaction volume </p>
+        <p>2 µL &#124; <b>10x NEB CutSmart-Buffer</b>
+        <br>
+        0,75 µL &#124; <b>BstEII</b>    
+        <br>
+        0,75 µL &#124; <b>XhoI</b>     
+        <br>
+        500 ng &#124; <b>DNA sample</b>
+        <br>
+        fill up  &#124; <b>ddH2O</b></p>
+        <p>Incubate at 37°C for 1 h.</p>
+        </div>
+        <br>
+        
+        <div class="figure">
+            <div class="fig-image pb-1">
+                <img style="width:auto;height:50vh" src="http://parts.igem.org/wiki/images/4/46/T--TU_Kaiserslautern--Gelbild_sAP_B2.png" alt="">
+            </div>
+            <div class="fig-caption">
+                <span>
+                    Test digest of L0-sAP_B2</b> using <i>BstEII</i> and <i>XhoI</i><br>
+                    <b>1</b> &#124; <a class="light-link" href="http://parts.igem.org/Part:BBa_K3781102">pAGM1276</a> &#124; 2842 bp<br>
+                    <b>2</b> &#124; <b>L0_sAP_B2</b> &#124; 1705 + 615 bp<br>
+                    <b>L</b> &#124; Thermofischer GeneRuler Plus Ladder [bp]]] </li>
+                </span>
+            </div>
+        </div>
+        <br>
+        <p>As can be seen in <i>Figure 4</i>, the empty <b>pAGM1276</b> shows <b>one band</b>, whereas the digested <b>L0_sAP_B2</b> displays the exact <b>two band pattern</b> that we anticipated from our <i>in silico</i> digest. This is already a pretty good indicator that our L0 part was <b>cloned successfully</b>! But what if some of the bases got lost during PCR, too small to be seen with gel electrophoresis? In order to dispel any doubts and verify the <b>correct insertion</b> and <b>sequence</b> of our <b>sAP secretion peptide</b> once and for all, we sent the plasmid off to commercial <b>Sanger sequencing</b> at MICROSYNTH, a swiss based sequencing company with a branch in Germany. </p>
+        <p>For this, we relied on a set of <b>sequencing primers</b> that have been designed by our <b>supervising working group</b> in order to facilitate sequencing of L0 basic parts. Due to the <b>high similarity</b> between the indivdual <b>L0 plasmid backbones</b> (they only really differ at the <b>insertion site</b>), these primers called <i>L0-Seq-forward</i> and <i>L0-Seq-reverse</i> can be used for sequencing of any and all L0 parts, <b>independently</b> of their <b>cloning position</b>.</p>
+        <p><i>L0-Seq-forward</i> &#124; aatacgcaaaccgcctctcc<br>
+        <i>L0-Seq-reverse</i> &#124; aataggcgtatcacgaggc</p>
+        <br>
+        <br>
+        <div class="figure">
+            <div class="fig-image pb-1">
+                <img src="http://parts.igem.org/wiki/images/a/a6/T--TU_Kaiserslautern--Engineering_Sequencing_Result.png" alt="">
+            </div>
+            <div class="fig-caption">
+                <span>
+                    Alligned sequences of <i>in silico</i> cloned L0_sAP_B2 and sample containing L0_sAP_B2 + <i>L0-Seq-forward</i>. The black arrows mark the beginning and the end of our B2 sAP secretion tag.
+                </span>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <p>Not even three days after sending our sample off to sequencing, we got the result! It's a bit like opening a bag of wonders every time you click on those sequencing files. You just never know wether things are going to allign perfectly or wether nothing seems to match at all! Luckily, our L0_sAP_B2 looked very good, as you can see in <i>Figure 5</i>.  The sequence of the processed <i>L0-Seq-forward</i> initiated fragment matches that of the <i>in silico</i> cloned L0_sAP_B2 perfectly, except for usual sequencing uncertainties in the very terminal regions of the fragment. This was great news!! Now we could continue or experimental journey by assembling our L0 secretion tag into a variety of L1 constructs. Thanks to the practicability of Modular Cloning, this wasn't a very difficult endeavour. </p>
+        <p>Now we have already elaborated on the <b>great importance</b> of the sAP secretion signal to the prospect of our project, so it doesn't come as a surprise that as soon as we had the finished L0_sAP_B2 part, we immediately started <b>implementing</b> it into <b>all of our L1 constructs</b>. In order to simplify this demonstration, let's just look at the MoClo ligation reaction performed for generating <a href=" http://parts.igem.org/Part:BBa_K3781213" class="light-link"><b>L1_sAP_RBD_Strep8His</b></a>. This L1 composite part contains the <b>sAP secretion signal</b>, a coding sequence for the <a href=" http://parts.igem.org/Part:BBa_K3781001" class="light-link"><b>SARS-CoV-2 receptor binding domain</b></a> and a C-terminal <a href=" http://parts.igem.org/Part:BBa_K3781017" class="light-link"><b>Strep8His</b></a> purification tag. </p>
+        <p>You will see that the reaction mix is basically identical to that of the <b>L0 ligation</b>, except now we have to remember the <b>two enzyme system</b> of MoClo and employ <b>BsaI</b> as our executing type IIS restriction enzyme. Also, instead of a L0 plasmid backbone we now want to include our L1 expression vector, <a href=" http://parts.igem.org/Part:BBa_K3781105" class="light-link"><b>weird_plex</b></a>, that will allows us to transfect and express our construct within <i>Leishmania tarentolae</i>. <b>Thermocycling conditions</b> for this ligation are virtually identical to the ones for a L0 ligation, as well. The only exception is that, after cycling, a <b>5 min incubation</b> is performed at <b>50°C</b> rather than <b>37°C</b>, because BsaI has a slighlty different activity pattern than BbsI.</p>
+        <br>
+         <div class="important-warning">
+        <p><b>L1 MoClo ligation</b> &#124; 20 µL reaction volume</p>
+        <p>2 µL &#124; <b>10x NEB CutSmart-Buffer</b>
+        <br>
+        2 µL &#124; <b>ATP</b>    
+        <br>
+        0,5 µL &#124; <b>BsaI</b>     
+        <br>
+        0,5 µL &#124; <b>T4 DNA Ligase</b>
+        <br>
+        40 fmol &#124; <b>L0_sAP_B2</b>
+        <br>
+        40 fmol &#124; <b>L0_RBD_B3_B4</b>
+        <br>
+        40 fmol &#124; <b>L0_Strep8His_B5</b>
+        <br>
+        40 fmol &#124; <b>weird_plex</b>
+        <br>
+        fill up &#124; <b>ddH2O</b></p>
+        </div>
+        <br>
+        <p>Again, after completion of the MoClo thermocycling run, <b>10 µL</b> of the resulting sample were transformed into <b>competent TOP10 <i>E. Coli</i></b>.  And yet again, after over-night incubation on <b>IPTG/Xgal agar plates</b>, we inoculated the <b>white colonies</b> into liquid culture. This time, tho, both the LB medium for the agar plates as well as for the liquid culture had <b>ampicillin</b> added, because <b>weird_plex</b> carries its own <b><i>E. Coli</i> expression cassette</b> that includes an <b>ampicillin resistance</b>.</p>
+        <p>The next morning, the liquid cultures were again prepped with the help of the MACHEREY-NAGEL <i>DNA MiniPrep Kit</i> and the (hopefully) assembled L1_sAP_RBD_Strep8His construct was extracted from the <i>E. Coli</i> cells. In order to <b>verify</b> wether our construct was correctly assembled or wether any L0 parts were by chance missing,  we performed another <b>test digest</b>. <i>In silico</i> cloning and digestion helped us to choose <b>PstI</b>, because it gives a very nice and distinct band pattern. </p>
+        <br>
+        <div class="figure">
+            <div class="fig-image pb-1">
+                <img src="http://parts.igem.org/wiki/images/a/a5/T--TU_Kaiserslautern--Gelbild_3xHAslashsAP_RBD_Strep8His.png" alt="">
+            </div>
+            <div class="fig-caption">
+                <span>
+                    <b>Test digest of L1 constructs</b> using <i>PstI</i><br>
+                    <b>1</b> &#124; <b>L1_sAP_RBD_Strep8His</b> &#124; 3894 + 1323 + 991 + 991 + 757 bp<br>
+                    <b>2</b> &#124; <a class="light-link" href="http://parts.igem.org/Part:BBa_K3781202">L1_3xHA_RBD_Strep8His</a>&#124; 3867 + 1323 + 991 + 991 + 757 bp<br>
+                    <b>L</b> &#124; Thermofischer GeneRuler Plus Ladder [bp]]] </li>
+                </span>
+            </div>
+        </div>
+        <br>
+        <p>As you can see in <b>Figure 6</b>, our L1 construct showed the expected bands. This means that the plasmid in our tube is of the predicted size, which is a very good sign, since this probably means that all L0 parts have been assembled into the L1 backbone successfully. Still, with <b>PstI</b>, it can be <b>hard to estimate</b> wether we are not just digesting the <b>empty L1 backbone</b> that somehow wiggled its way through blue-white screening. So in order to <b>verify</b> the identity of our prepped L1 construct with 100% certainty, we again sent the plasmid off to <b>Sanger sequencing</b> at MICROSYNTH.
+        <br>
+        <div class="figure">
+            <div class="fig-image pb-1">
+                <img src="http://parts.igem.org/wiki/images/3/3e/T--TU_Kaiserslautern--Engineering_Sequencing_L1%21%21.png" alt="">
+            </div>
+            <div class="fig-caption">
+                <span>
+                    Sequence alignment for sequenced L1_sAP_RBD_Strep8His composite part compared to <i>in silico</i> part
+                </span>
+            </div>
+        </div>
+        <br>
+        Yayy! After three days, the sequencing results are back and the alignment looks super sharp! Except from a few bases that were probably missed due to clustering of identical bases (Sanger sequencing always struggles with <b>repetitive single nucleotide sequences</b>), everything looks super promising. This means that we not only successfully constructed our basic <b>L0_sAP_B2</b> part, but we have also managed to assemble it into a <b>complete L1 construct</b>. Now as mentioned before, we of course didn't only do this for L1_sAP_RBD_Strep8His, but for many other constructs that are all ready for the next experimental round. Transfection into Leishmania!
+        <br>
+        <br>
+        <br>
+        <br>
+        <html>
+        <h2 id="head-3" class="text-heading color-flip">EXPRESSION</h2>
+        <p>Now that we have mastered all the cloning work, it is time to move on to the second big step in our project - expressing the genetic constructs in <i><b>Leishmania tarentolae</b></i>. In order to do this, we of course have to somehow get our construct <b>into</b> the Leishmania cell culture first. How do we do this? By <b>transfecting</b> the cells via <b>electroporation</b>. This procedure as well as all other labwork involving the cultivation of Leishmania is based on the protocols provided by our second <b>supervising working group</b> as well as the protocols distributed by <b>JenaBioscience</b> in their commercial <a href=" https://www.jenabioscience.com/lexsy-expression/lexsy-configurations/inducible-genome-integrated/ege-1410blecherry-inducible-lexsy-expression-kit" class="light-link"><b>LEXSinduce expression kit</b></a>. If you are interested in finding out more about the specifics of working with Leishmania, please feel free to check out our guide on <a href=" https://2021.igem.org/Team:TU_Kaiserslautern/Contribution" class="light-link"><b>how to</b></a> handle Leishmania!</p>
+        <p>After transfecting the parasites with our L1_sAP_RBD_Strep8His, the Leishmania are brought out onto agar plates. Here, addition of the antibiotic <b>bleomycin</b> ensures that all growing colonies must have taken up our plasmid, since the L1 expression vector <b>weird_plex</b> is equipped with a <b>bleomycin resistance gene</b>.  It takes anything from <b>5 to 9 days</b> for proper colonies of sufficient size to form on the plate. These can then be <b>inoculated</b> into <b>liquid medium</b> where the parasites can be grown and <b>re-diluted</b> into ever larger volumes. Once the cell culture has reached the desirable density, <b>protein expression</b> can be <b>induced</b> by addition of <b>tetracycline</b> to the culture medium. For more in-depth information on the specific features of the weird_plex expression vector and its inducible expression, feel free to head over to the <a href=" http://parts.igem.org/Part:BBa_K3781105" class="light-link"><b>weird_plex</b></a> part page.</p>
+        <p>Tetracycline induction is held stable for around <b>2-3 days</b>, until the cell culture is finally <b>harvested</b>. By <b>spinning down</b> the culture volume in a centrifuge for over an hour, the cells are separated from the <b>culture medium</b> and form a <b>pellet</b>. Depending on the <b>localisation</b> of protein expression, this pellet can be lysed and the resulting <b>lysate</b> either <b>purified</b> (cytosolic expression) or <b>cooked up</b> with <b>SDS sample buffer</b> for analysis (secreted expression). In our case most of the L1 constructs, including <b>L1_sAP_RBD_Strep8His</b>, mediate <b>secretion</b> of the <b>recombinantly expressed protein</b> into the culture medium. Thus, after centrifugation, the cell culture <b>supernatant</b> is <b>carefully collected</b> in order to immediately undergo downstream <b>purification procedures</b>. Only a small sample is safed for analysis purposes. The sample is treated with <b>trichloric acid</b> in order to <b>precipitate</b> all protein and the <b>resulting pellet</b> cooked up with <b>SDS sample buffer</b>. Along with the cell lysate sample as well as <b>control samples</b> of <b>untransfected Leishmania cell culture</b>, it is loaded onto an SDS-Gel for <b>SDS-PAGE</b>. After <b>western blotting</b>, the samples can be <b>immunostained</b> with the help of different antibodies in order to visualize the target protein. In the case of <b>L1_sAP_RBD_Strep8His</b>, we chose <b>antibodies against RBD</b> to stain against our fusion protein.</p>
+        <br>
+
+        <div class="figure">
+            <div class="fig-image pb-1">
+                <img src="http://parts.igem.org/wiki/images/e/e8/T--TU_Kaiserslautern--Engineering_Blot_L1-sAP_RBD_Strep8His.png" alt="">
+            </div>
+            <div class="fig-caption">
+                <span>
+                    <b>Immunoblot</b> &#124; of Leishmania cell cultures transfected with different L1 constructs<br>
+                    1. AB &#124; <b>ms anti-RBD</b><br>
+                    2. AB &#124; <b>rb anti-ms HRP</b><br>
+                    <b>1</b> &#124; <b>L1_sAP_RBD_Strep8His</b> &#124; 27.7 kDa<br>
+                    <b>2</b> &#124; <a href="http://parts.igem.org/Part:BBa_K3781204" class="light-link">L1_sAP_Myc_RBD_Strep8His</a> &#124; 30.2 kDA<br>
+                    <b>3</b> &#124; <a href="http://parts.igem.org/Part:BBa_K3781214" class="light-link">L1_sAP_RBD_GST</a> &#124; 51.9 kDa<br>
+                    <b>n.c.</b> &#124; negative control &#124; untransfected Leishmania culture
+                    <b>P</b> cell pellet &#160;&#124;&#160; <b>S</b>  cell culture supernatant &#160;&#124;&#160; <b>+</b>  culture induced with tetracycline &#160;&#124;&#160;<br>
+                    <b>L</b> &#124; Thermo Scientific PageRuler Protein Ladder [kDa]
+                </span>
+            </div>
+        </div>
+
+        <br>
+        <div class="figure">
+            <div class="fig-image pb-1">
+                <img src="http://parts.igem.org/wiki/images/3/3d/T--TU_Kaiserslautern--Engineering_Blot_L1_sAP_VS_3xHA.png" alt="">
+            </div>
+            <div class="fig-caption">
+                <span>
+                    <b>Immunoblot</b> &#124; of Leishmania cell cultures transfected with different L1 constructs<br>
+                    1. AB &#124; <b>ms anti-RBD</b><br>
+                    2. AB &#124; <b>rb anti-ms HRP</b><br>
+                    <b>1</b> &#124; <a href="http://parts.igem.org/Part:BBa_K3781210" class="light-link">L1_sAP_RBD_mVenus</a> &#124; 52.1 kDa<br>
+                    <b>2</b> &#124; <a href="http://parts.igem.org/Part:BBa_K3781212" class="light-link">L1_sAP_RBD_mVenus_GST</a> &#124; 78.8 kDA<br>
+                    <b>3</b> &#124; <a href="http://parts.igem.org/Part:BBa_K3781201" class="light-link">L1_3xHA_RBD_mVenus</a> &#124; 55.9 kDa<br>
+                    <b>4</b> &#124; <a href="http://parts.igem.org/Part:BBa_K3781206" class="light-link">L1_3xHA_RBD_HA8His</a> &#124; 28 kDa<br>
+                    <b>p.c.</b> &#124; positive control &#124; RBD-GFP fusion protein &#124; 54 kDa<br>
+                    <b>n.c.</b> &#124; negative control &#124; Leishmania culture transfected with empty weird_plex<br>
+                    <b>P</b> cell pellet &#160;&#124;&#160; <b>S</b>  cell culture supernatant &#160;&#124;&#160; <b>+</b>  culture induced with tetracycline &#160;&#124;&#160;<br>
+                    <b>L</b> &#124; Thermo Scientific PageRuler Protein Ladder [kDa]
+                </span>
+            </div>
+        </div>        
+        
+        <p>After loading several different cell cultures transfected with our <b>secreted fusion proteins</b> onto a blot and staining against the <b>SARS-CoV-2 receptor binding domain</b>, see <i>Figure 8</i>, we were infact able to detect a <b>significant expression</b> of our recombinant protein in <b>all three transfected cell cultures</b>, <i>1-3</i>! As expected, the <b>negative control</b> <i>n.c.</i>, a Leishmania culture that wasn't transfected with any L1 expression vector, showed no bands. Furthermore, protein expression could only be detected in cultures that were induced with tetracycline, <i>P+/S+</i>, advocating the efficiency of the <b>tet-controlled transcriptional activation</b>. Looking back at our sAP secretion tag, we can observe that bands of the expected size appear in both the cell lysate <i>P</i> as well as the culture supernatant <i>S</i>, but <b>signal intensity</b> is much <b>higher</b> in the <b>supernatant</b> for all three cultures. The faint bands in the lysate samples indicate that a small part of our fusion protein may still be undergoing <b>intracellular processing</b> or might be stuck within the cytosole. Yet, the <b>vast majority</b> of protein is <b>sucessfully secreted</b> into the exterior culture medium! The same goes for cultures <i>1</i> and <i>2</i> in <i>Figure 9</i> where protein expression can only be detected in the cell culture supernatant. This proves the correct <b>functionality</b> of our <b>sAP secretion tag</b> and highlights its importance in producing complexly glycosylated protein that need to <b>pass the secretory pathway</b>.
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2 id="head-4" class="text-heading color-flip">PURIFICATION</h2>
+        <p>After expression in Leishmania, we of course also want to <b>harvest</b> the fruit of our work, our <b>secreted recombinant protein</b>. The best way to do this is to incorporate a <b>purification tag</b> into the fusion protein, ideally allowing us to purify it directly from crude cell culture supernatant with the help of <b>gravity flow/batch purification</b> procedures. Thes procedures certainly hold the most room for <b>improvement</b> when it comes to the <b>ongoing implementation</b> of our project, since many purification attemps have remained <b>unsuccessful</b>. We are still working hard on figuring out what factors can be altered in order to increase purification yield. Since Strep-purification has not given any significant results yet, we cannot continue our demonstration by following <b>L1_sAP_RBD_Strep8His</b> all the way down the line. Instead we'll take a look at a GST-tagged fusion protein, <a href="http://parts.igem.org/Part:BBa_K3781214" class="light-link"><b>L1_sAP_RBD_GST</b></a>, that shows the most promising results and gives further evidence to the <b>quality</b> of our <b>sAP secretion signal</b>! 
+        <br>
+        <div class="figure">
+            <div class="fig-image pb-1">
+                <img src="http://parts.igem.org/wiki/images/2/24/T--TU_Kaiserslautern--Engineering_Blots_Purification.png" alt="">
+            </div>
+            <div class="fig-caption">
+                <span>
+                    <b>Immunoblot</b> &#124; of Leishmania cell culture after <b>GST-purification</b><br>
+                    culture was transfected with <b>L1_sAP_RBD_GST</b> and protein expression <b>induced</b> with tetracycline<br>
+                    blot was co-stained against both <b>RBD</b> and <b>GST</b><br>
+                    1.AB &#124; <b>ms anti-RBD</b>, <b>ms anti-GST</b><br>
+                    2.AB &#124; <b>rb anti-ms HRP</b>
+                    <b>Ü</b> &#124; supernatant &#160;&#124;&#160; <b>Ü.C</b> &#124; concentrated supernatant &#160;&#124;&#160; <b>F</b> &#124; Flowthrough &#160;&#124;&#160; <b>W</b> &#124; Wash &#160;&#124;&#160; <b>E</b> &#124; Eluate &#160;&#124;&#160; <b>E.T</b> &#124; Eluate precipitated with TCA &#160;&#124;&#160; <b>L</b> &#124; Lysate &#160;&#124;&#160; <b>L/P</b> &#124; Lysate + cell debree<br>
+                    <b>M</b> &#124; Thermo Scientific PageRuler Protein Ladder [kDa]
+                </span>
+            </div>
+        </div>
+    
+        <br>
+        <p>There is two things that we can conclude from the blots in <i>Figure 10</i>. The first thing is that there is clearly an <b>issue</b> with our <b>GST-tag</b> being <b>cleaved off prematurely</b>, rendering a lot of singular GST and significantly decreasing our <b>RBD_GST fusion protein</b> purification yield. The second thing that we can see is the <b>differences</b> between the samples purified from the <b>cell lysate</b> (right blot) and the ones purified from the <b>culture medium supernatant</b> (left blot). We can clearly see that the <b>intensity</b> of the immunostain is much <b>higher</b> in the <b>supernatant purification</b>, suggesting that <b>recombinant protein quantities</b> in the culture medium exceeded those of the cell lysate by far. Thus, our <b>sAP secretion tag</b> effectively mediates translocation of the target protein into the cell's exterior!</p>
+        <p>Finally, we could not only show that the <b>sAP secretion peptide</b> has been successfully adapted as a <b>MoClo basic part</b> which can be assembled into <b>cohesive L1 constructs</b>, we were also able to show that it can be transgenically expressed in <i>Leishmania tarentolae</i> and mediates <b>exocytosis</b> of the recombinant target protein into the surrounding <b>cell culture medium</b>.<br>
+        Now of course, most of our cloning, expression and purification efforts didn't show complete success upon first trial, so keep in mind that for many of our parts, including L0_sAP_B2, the generation process was a lot more tedious than the idealized description given above. By tweaking parameters such as <b>thermocycling settings</b> during PCR or <b>DNA concentrations</b> during ligation, most of these obstacles were eventually overcome and led us to build the extensive <a href="https://2021.igem.org/Team:TU_Kaiserslautern/Parts" class="light-link"><b>part collection</b></a> that we are proud to present to you today! Feel free to check out our <a href="https://2021.igem.org/Team:TU_Kaiserslautern/Labjournal" class="light-link"><b>lab journal</b></a> to catch a first hand view on our experimental approaches. And as always, reach out to us if you have any further questions!</p>
+        <br>
+        <br>
+        <br>
+        <br>         
+        <div class="sources">
+                        <h3>Sources</h3>
+                        <ol class="source-list">
+                            <li><a id="ref-1" href="#source-1"><b>Ilg T</b>, Stierhof YD, Etges R, Adrian M, Harbecke D, Overath P. Secreted acid phosphatase of Leishmania mexicana: a filamentous phosphoglycoprotein polymer. Proc Natl Acad Sci U S A. 1991;88(19):8774-8778. doi:10.1073/pnas.88.19.8774</a></li>
+                            <li><a id="ref-2" href="#source-2"><b>Schjoldager, K.T.</b>, Narimatsu, Y., Joshi, H.J. et al. Global view of human protein glycosylation pathways and functions. Nat Rev Mol Cell Biol 21, 729–749 (2020). https://doi.org/10.1038/s41580-020-00294-x</a></li>
+                            <li><a id="ref-3" href="#source-3">https://www.jenabioscience.com/files/jenabioscience/datasheet_extern/EGE-1410.pdf, pages 9, 18, last visited 10/17/21, 11:00 ECT</a></li>
+                            <li><a id="ref-4" href="#source-4"><b>Weber E</b>, Engler C, Gruetzner R, Werner S, Marillonnet S (2011) A Modular Cloning System for Standardized Assembly of Multigene Constructs. PLoS ONE 6(2): e16765. https://doi.org/10.1371/journal.pone.0016765</a></li>
+                            <li><a id="ref-5" href="#source-5"><b>Marillonnet, S.</b>, & Grützner, R. (2020). Synthetic DNA assembly using golden gate cloning and the hierarchical modular cloning pipeline. Current Protocols in Molecular Biology, 130, e115. doi: 10.1002/cpmb.115</a></li>
+                        </ol>
+            </div>          
+        </div>  
     </main>
     <footer class="">
-        <div class="container-md d-flex justify-content-center flex-wrap flex-lg-nowrap flex-row justify-content-lg-evenly">
-            <div class="footer-sponsors d-flex justify-content-center flex-wrap flex-lg-nowrap flex-wrap flex-lg-nowrap justify-content-evenly">
-                <div class="sponsor">
-                    <a href=""><img src="https://via.placeholder.com/80"></div>
-                </a>
-                <div class="sponsor">
-                    <a href=""><img src="https://via.placeholder.com/80"></div>
-                </a>
-                <div class="sponsor">
-                    <a href=""><img src="https://via.placeholder.com/80"></div>
-                </a>
-                <div class="sponsor">
-                    <a href=""><img src="https://via.placeholder.com/80"></div>
-                </a>
-                <div class="sponsor">
-                    <a href=""><img src="https://via.placeholder.com/80"></div>
-                </a>
-                <div class="sponsor">
-                    <a href=""><img src="https://via.placeholder.com/80"></div>
-                </a>
-                <div class="sponsor">
-                    <a href=""><img src="https://via.placeholder.com/80"></div>
-                </a>
-                <div class="sponsor">
-                    <a href=""><img src="https://via.placeholder.com/80"></div>
-                </a>
+        <div class="container-md d-flex flex-row justify-content-center justify-content-lg-evenly flex-wrap">
+            <div class="footer-sponsors d-flex flex-wrap justify-content-evenly">
+                <div class="sponsor"><a href="https://2021.igem.org/Team:TU_Kaiserslautern/Sponsors#implen"><img src="https://2021.igem.org/wiki/images/d/dd/T--TU_Kaiserslautern--LogoImplen.jpg"></a></div>
+                <div class="sponsor"><a href="https://2021.igem.org/Team:TU_Kaiserslautern/Sponsors#jena"><img src="https://2021.igem.org/wiki/images/e/ea/T--TU_Kaiserslautern--jenabioscience.png"></a></div>
+                <div class="sponsor"><a href="https://2021.igem.org/Team:TU_Kaiserslautern/Sponsors#snapgene"><img src="https://2021.igem.org/wiki/images/5/56/T--TU_Kaiserslautern--LogoSnapgene.png"></a></div>
+                <div class="sponsor"><a href="https://2021.igem.org/Team:TU_Kaiserslautern/Sponsors#labforward"><img src="https://2021.igem.org/wiki/images/5/55/T--TU_Kaiserslautern--LogoLabforward.png"></a></div>
+                <div class="sponsor"><a href="https://2021.igem.org/Team:TU_Kaiserslautern/Sponsors#heidolph"><img src="https://2021.igem.org/wiki/images/d/d6/T--TU_Kaiserslautern--LogoHeidolph_Instruments.jpg"></a></div>
+                <div class="sponsor"><a href="https://2021.igem.org/Team:TU_Kaiserslautern/Sponsors#stadtwerke"><img src="https://2021.igem.org/wiki/images/c/c9/T--TU_Kaiserslautern--LogoSWK.jpg"></a></div>
+                <div class="sponsor"><a href="https://2021.igem.org/Team:TU_Kaiserslautern/Sponsors#genScript"><img src="https://2021.igem.org/wiki/images/d/da/T--TU_Kaiserslautern--LogoGenScript.jpg"></a></div>
+                <div class="sponsor"><a href="https://2021.igem.org/Team:TU_Kaiserslautern/Sponsors#vectorbuilder"><img src="https://2021.igem.org/wiki/images/4/48/T--TU_Kaiserslautern--LogoVectorBuilder.png"></a></div>
+                <div class="sponsor"><a href="https://2021.igem.org/Team:TU_Kaiserslautern/Sponsors#microsynth"><img src="https://2021.igem.org/wiki/images/8/86/T--TU_Kaiserslautern--Microsynth.png"></a></div>
+                <div class="sponsor"><a href="https://2021.igem.org/Team:TU_Kaiserslautern/Sponsors#zukunftsregion"><img src="https://2021.igem.org/wiki/images/f/f1/T--TU_Kaiserslautern--LogoZRW.png"></a></div>
+                <div class="sponsor"><a href="https://2021.igem.org/Team:TU_Kaiserslautern/Sponsors#avestin"><img src="https://2021.igem.org/wiki/images/d/d9/T--TU_Kaiserslautern--LogoAvestin.jpg"></a></div>
+                <div class="sponsor"><a href="https://2021.igem.org/Team:TU_Kaiserslautern/Sponsors#machery"><img src="https://2021.igem.org/wiki/images/d/db/T--TU_Kaiserslautern--LogoMacherey-Nagel.jpg"></a></div>
             </div>
             <div class="vr mx-3"></div>
-            <div class="info d-flex justify-content-center flex-wrap flex-lg-nowrap flex-column justify-content-center">
+            <div class="info d-flex flex-column justify-content-center">
                 <div class="info">
                     iGem Kaiserslautern
                 </div>
@@ -409,19 +459,20 @@
                     <b>2021</b>
                 </div>
                 <div class="info accentuate">
-                    <i>made by jules</i>
+                    <i>made by <a href="https://stonedstreet.de">jules</a></i>
                 </div>
             </div>
             <div class="vr mx-3"></div>
-            <div class="socials d-flex justify-content-center flex-wrap flex-lg-nowrap flex-column justify-content-start">
+            <div class="socials d-flex flex-column justify-content-start">
                 <a class="social-link" href="https://www.uni-kl.de/hochschulgruppen/iGEM/en/hello/"><i class="fa fa-globe px-2"></i>Website</a>
                 <a class="social-link" href=""><i class="fab fa-facebook px-2"></i>Facebook</a>
                 <a class="social-link" href="https://twitter.com/igem_tukl"><i class="fab fa-twitter px-2"></i>Twitter</a>
                 <a class="social-link" href="https://www.instagram.com/igem.kaiserslautern"><i class="fab fa-instagram px-2"></i>Instagram</a>
             </div>
         </div>
-
+    
     </footer>
+    
 </body>
 
 </html>

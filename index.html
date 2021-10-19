@@ -9,12 +9,17 @@
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" 
         rel="stylesheet">
     <link href="src/style/custom.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="slides.css" media="screen" rel="stylesheet" type="text/css" />
 
     <script src="src/dist/jquery/jquery.min.js"></script>
+    <script src="src/dist/gsap.js"></script>
+    <script src="src/dist/scrolltrigger.min.js"></script>
     <script src="src/dist/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="src/scripts/utility.js"></script>
+    <script src="animation.js"></script>
+    <script src="slides.js"></script>
 </head>
-<body>
+<body class="body">
     <nav class="navbar navbar-expand-xl navbar-light">
         <a class="navbar-brand d-none d-sm-block" href="index.html">
             <div class="logo-circle">
@@ -99,22 +104,94 @@
                         <h1 class="display-1 moclomania">
                             MOCLOMANIA
                         </h1>
-                        <p class="lead">Revolutionizing therapeutic protein production</p>
+                        <p class="lead">Revolutionizing protein production by establishing the Modular Cloning system in <i>Leishmania tarentolae</i></p>
                     </div>
                 </div>
-                <hr class="my-3">
-                <p>I need more information to continue writing more text here. But I don't know what they want me to write. </p>
             </div>
           </div>
-          <div class="video">
-            <video autoplay muted loop>
-            <source src="src/resources/rick.webm" type="video/webm">
-          </div>
-          <div class="container outlined">
-              <div class="promotion-video w-100 p-5 h-50 text-center">
+         
+          <div class="container outlined my-3 p-0">
+              <div class="promotion-video w-100 h-50 text-center">
+                <div class="video">
+                    <video autoplay muted loop>
+                    <source src="src/resources/rick.webm" type="video/webm">
+                  </div>    
                 <h1 class="align-middle">Promotion Video</h1>
                 <button class="btn btn-lg btn-outline-light align-middle">Show me!</button>
               </div>
+          </div>
+          <div class="clear-it">
+
+          </div>
+          <div class="container home-block">
+              <h1><span class="blocked">Escherichia</span> coli</h1>
+            <p class="fade-in">In <span class="emph">medicine</span> and <span class="emph">research</span>, you often need huge amounts of <span class="emph">protein</span> which usually can be produced in the lab by using organisms like <i class="emph">Escherichia coli</i>.</p>
+          </div>
+          <div class="container home-block">
+            <p class="fade-in">But especially the production of therapeutic proteins in most common lab organisms can be challenging, as they do not process the proteins suitable for usage in the human body.</p>
+          </div>
+          <div class="container home-block">
+            <p class="fade-in">The biggest difficulty in processing a protein is glycosylation, the attachment of carbohydrates which shows various patterns in different organisms.</p>
+
+          </div>
+          <div class="container home-block">
+            <p class="fade-in">Our solution for this is <i>Leishmania tarentolae</i>.</p>
+
+          </div>
+          <div class="container home-block">
+            <p class="fade-in">Leishmania are obligate parasitic protozoa which can cause diseases like leishmaniasis, but in case of <i>Leishmania tarentolae</i>, the organism is non-pathogenic to humans. And the best part is: Leishmania show human-like glycosylation patterns.</p>
+          </div>
+          <div class="container home-block">
+            <p class="fade-in">To establish an efficient production system for [therapeutic] proteins in Leishmania, we use Modular Cloning - a building block system based on Golden Gate cloning.</p>
+
+          </div>
+          <div class="container home-block">
+            <p class="fade-in">Once the library of genetic parts is built, it can be used all around the world to make the production of proteins, especially for therapeutic purposes, easier and more affordable.</p>
+          </div>
+          
+          <div class="hideMe">
+            <h1>Horizontal full-screen slider (GSAP 3)<span>Mousewheel, nav dot, drag/throw &amp; arrow controls</span></h1>
+            <svg id="leftArrow" class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <g stroke-linejoin="round" stroke-linecap="round" >
+                <circle r="46" cx="50" cy="50" />
+                <polyline points="60 25, 30 50, 60 75" ></polyline>
+              </g>
+            </svg>
+            <svg id="rightArrow" class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <g stroke-linejoin="round" stroke-linecap="round" >
+                <circle r="46" cx="50" cy="50" />
+                <polyline points="40 25, 70 50, 40 75" ></polyline>
+              </g>
+            </svg>
+            <div id="masterWrap">
+              <div id="panelWrap">
+                <section> 
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/314556/greensock-logo.svg" alt="GreenSock Logo" width="300">
+                  <p>This slider demo is powered by GSAP 3 along with the Draggable and Inertia plugins</p>
+                </section>
+                <section> <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/314556/clock.png" width="75" alt="clock">
+                  <h3>Bottom dot animation</h3>
+                  <p>See that animation on the bottom with the navigation dots and rotating slide titles? Its time is based on the position of the draggable element. Keep an eye on it as you drag or the slides animate.</p>
+                </section>
+                <section>    
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/314556/sleepingDogShadow.svg" alt="Dog Sleeping" width="250">
+                  <h3>Random dog </h3>
+                  <p>Why? Because dogs are cool.</p>
+                </section>
+                <section id="section6"> 
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/314556/handTablet.svg" width="200" alt="Mobile Tablet">
+                  <h3>Handy for many things</h3>
+                  <p>We all need a full-screen slider from time to time.</p>
+                </section>
+                <section> 
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/314556/craigmasternew.png" width="100" alt="Craigs Avatar">
+                  <h3>Like this demo?</h3>
+                  <p>Follow me on Twitter.</p>
+                  <a href="https://twitter.com/Craig_PointC" target="_top" class="twitterFollow">Follow @Craig_PointC</a> </section>
+              </div>
+            </div>
+            <div class="dots">
+            </div>
           </div>
     </main>
 </body>
