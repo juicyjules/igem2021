@@ -1,0 +1,70 @@
+
+{{TU_Kaiserslautern}}
+{{TU_Kaiserslautern/bootstrapcssdd}}
+{{TU_Kaiserslautern/stupidbasestyle}}
+{{TU_Kaiserslautern/header}}
+<html>
+<script src="https://2021.igem.org/wiki/index.php?title=Template:TU_Kaiserslautern/super&action=raw&ctype=text/javascript"></script>
+<script src="https://2021.igem.org/wiki/index.php?title=Template:TU_Kaiserslautern/slides&action=raw&ctype=text/javascript"></script>      
+          <div class="hideMe">
+            <svg id="leftArrow" class="arrow  " xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 120 120">
+              <g stroke-linejoin="round" stroke-linecap="round" >
+                <circle r="50" cx="50" cy="50" />
+                <polyline points="60 25, 30 50, 60 75" ></polyline>
+              </g>
+            </svg>
+            <svg id="rightArrow" class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 120 120">
+              <g stroke-linejoin="round" stroke-linecap="round" >
+                <circle r="50" cx="50" cy="50" />
+                <polyline points="40 25, 70 50, 40 75" ></polyline>
+              </g>
+            </svg>
+            <div id="masterWrap" class="home-container">
+              <div id="panelWrap">
+                <section> 
+                  <div class="container moclo-jumbo">
+                    <div class="image-heading">
+                        <img alt="" class="moclo-image" src="src/resources/logo.png" />
+                        <div class="moclo-heading d-xl-inline-block">
+                            <h1 class="display-1 moclomania">
+                                MOCLOMANIA
+                            </h1>
+                            <p class="lead">Revolutionizing protein production by establishing the Modular Cloning system in <i>Leishmania tarentolae</i></p>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+                <section style="padding:0!important;"> 
+                  <div  class="video">
+                    <video id="video" autoplay muted loop>
+                    <source src="src/resources/rick.webm" type="video/webm">
+                    </video>
+                  </div>  
+                 </section>
+                <section> 
+                  <h1><span class="blocked">Escherichia</span> coli</h1>
+                  <p class="big-para">In <span class="emph">medicine</span> and <span class="emph">research</span>, you often need huge amounts of <span class="emph">protein</span> which usually can be produced in the lab by using organisms like <i class="emph">Escherichia coli</i>.</p>
+                </section>
+                <section> <p class="big-para">But especially the production of <span class="emph">therapeutic proteins</span> in most common lab organisms can be challenging, as they do not process the proteins <span class="emph">suitable</span> for usage in the <span class="emph">human body</span>.</p>
+                </section>
+                <section>    
+                  <p class="big-para">The biggest <span class="emph">difficulty</span> in processing a protein is <span class="emph">glycosylation</span>, the attachment of carbohydrates which shows various patterns in <span class="emph">different organisms</span>.</p>
+                </section>
+                <section id="section6"> 
+                  <p class="big-para">Our solution for this is <span class="emph"><i>Leishmania tarentolae</i></span>.</p>
+                </section>
+                <section> 
+                  <p class="big-para">Leishmania are <span class="emph">obligate parasitic protozoa</span> which can cause diseases like leishmaniasis, but in case of <i>Leishmania tarentolae</i>, the organism is <span class="emph">non-pathogenic</span> to humans. And the best part is: Leishmania show <span class="emph">human-like glycosylation patterns</span>.</p>
+                </section>
+                <section> 
+                  <p class="big-para">To establish an <span class="emph">efficient production system</span> for proteins in Leishmania, we use <span class="emph">Modular Cloning</span> - a building block system based on <span class="emph">Golden Gate cloning</span>.</p>
+                </section>
+                <section> 
+                  <p class="big-para">Once the <span class="emph">library</span> of genetic parts is built, it can be used all around the world to make the production of proteins, especially for therapeutic purposes, <span class="emph">easier</span> and more <span class="emph">affordable</span>.</p>
+                </section>
+                </div>
+            </div>
+            <div class="dots">
+            </div>
+    <div id="particles-js"></div>
+</html>
